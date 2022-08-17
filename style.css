@@ -8,6 +8,10 @@ body{
     background-color: var(--blue);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--darkgrey);
+    background-image: url(images/pexels-eberhard-grossgasteiger-1367179.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header{
