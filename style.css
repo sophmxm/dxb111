@@ -1,12 +1,12 @@
-:root{
+:root {
     --white: white;
     --darkgrey: #222;
-    --blue: #507F8D;
+    --blue: #8BADB6;
 }
 
-body{
+body {
     background-color: var(--blue);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--darkgrey);
     background-image: url(images/pexels-eberhard-grossgasteiger-1367179.jpg);
     background-repeat: no-repeat;
@@ -14,99 +14,164 @@ body{
     background-attachment: fixed;
 }
 
-header{
+header {
     background-color: var(--white);
     padding: 12px;
 }
 
-nav{
+header.index{
+    margin-top: calc(40vh);
     text-align: center;
+}
+
+nav {
     font-size: small;
 }
 
-nav>a{
+nav>a {
     color: var(--blue);
     margin-right: 12px;
     text-decoration: none;
 }
 
-h1{
+h1,h2,h3,h4{
     color: var(--blue);
     font-family: 'Lobster Two', cursive;
+}
+
+h1 {
     text-align: center;
     margin: 0 0 12px 0;
 }
 
-h1>a{
+nav>h1 {
+    display: inline;
+}
+
+h1>a {
     text-decoration: none;
 }
 
-h1>a:visited{
+h1>a:visited {
     color: inherit;
 }
 
-main{
+.h-small{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: var(--darkgrey);
+    margin-right: 6px;
+}
+
+hr{
+    border: 1px solid var(--darkgrey);
+    margin: 12px 0;
+    content: " \22C6 ";
+}
+
+main {
     margin-top: 6px;
 }
 
-.main-page{
+.container {
     background-color: var(--white);
-    padding: 32px 12px;
-    margin-top: calc(50vh - 131px/2 - 12px);
-    margin-left: 24px;
-    margin-right: 24px;
+    padding: 32px 24px;
+    display: block;
+    margin: 24px;
 }
 
-article{
+article {
     background-color: var(--white);
     padding-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 24px;
+    text-align: justify;
 }
 
-article::after{
+article::after {
     content: "";
     clear: both;
-    display: table;}
+    display: table;
+}
 
-article>p,a,button{
+article>p,
+a,
+button {
     margin: 12px;
     text-align: justify;
 }
 
-a{
+.hidden {
+    display: none;
+    margin-top: 12px;
+}
+
+.show:focus~.hidden {
+    display: block;
+}
+
+a {
     color: var(--blue);
 }
 
-.icons{
+.icons {
     display: inline;
 }
 
-button{
+button {
     background-color: lightgrey;
     border: none;
     padding: 6px;
+}
+
+button.btn-external {
     float: right;
     margin: 0 12px 0 0;
 }
 
-button:after{
+button.btn-external:after {
     content: " »";
     font-size: 16px;
     font-weight: bold;
 }
 
-.placeholder{
+button.btn-down {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scroll-down{
+    color: var(--white);
+    text-align: center;
+    margin-top: calc(28vh - 131px/2 - 12px);
+    font-size: 64px;
+}
+
+.arrow {
+    border: solid var(--white);
+    border-width: 0 6px 6px 0;    
+    display: inline-block;
+    padding: 6px;
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+.preview {
     background-color: lightgrey;
     width: 100%;
 }
 
-.placeholder:after{
+.preview:after {
     content: "";
     padding-bottom: 100%;
     display: block;
 }
 
-.pfp{
+.pfp {
     background-color: lightgrey;
     height: 50px;
     width: 50px;
@@ -114,7 +179,7 @@ button:after{
     float: left;
 }
 
-section{
+section {
     clear: both;
     padding: 12px 16px;
 }
