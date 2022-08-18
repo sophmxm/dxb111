@@ -20,7 +20,8 @@ header {
 }
 
 header.index{
-    margin-top: calc(40vh);
+    margin-top: 40vh;
+    margin-bottom: 45vh;
     text-align: center;
 }
 
@@ -87,6 +88,12 @@ article {
     text-align: justify;
 }
 
+article.index{
+    padding: 32px 24px;
+    display: block;
+    margin: 24px;
+}
+
 article::after {
     content: "";
     clear: both;
@@ -98,15 +105,6 @@ a,
 button {
     margin: 12px;
     text-align: justify;
-}
-
-.hidden {
-    display: none;
-    margin-top: 12px;
-}
-
-.show:focus~.hidden {
-    display: block;
 }
 
 a {
@@ -123,43 +121,31 @@ button {
     padding: 6px;
 }
 
-button.btn-external {
-    float: right;
-    margin: 0 12px 0 0;
+section {
+    clear: both;
+    padding: 12px 16px;
 }
 
-button.btn-external:after {
-    content: " »";
-    font-size: 16px;
-    font-weight: bold;
-}
-
-button.btn-down {
-    background-color: transparent;
-    color: var(--white);
-    font-size: 24px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* INDEX EXCLUSIVE */
 .scroll-down{
-    color: var(--white);
     text-align: center;
-    margin-top: calc(28vh - 131px/2 - 12px);
-    font-size: 64px;
+    margin-top: calc(39vh);
+    animation: bop 2s infinite;
+    position: absolute;
+    left: 50%;
+    right: 50%;
 }
 
-.arrow {
+.arrow-down {
     border: solid var(--white);
     border-width: 0 6px 6px 0;    
     display: inline-block;
     padding: 6px;
-}
-
-.down {
     transform: rotate(45deg);
+    font-size: 64px;
 }
 
+/* WORKS EXCLUSIVE */
 .preview {
     background-color: lightgrey;
     width: 100%;
@@ -171,6 +157,18 @@ button.btn-down {
     display: block;
 }
 
+button.btn-external {
+    float: right;
+    margin: 0 12px 0 0;
+}
+
+button.btn-external:after {
+    content: " »";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CONTACT EXCLUSIVE */
 .pfp {
     background-color: lightgrey;
     height: 50px;
@@ -179,7 +177,10 @@ button.btn-down {
     float: left;
 }
 
-section {
-    clear: both;
-    padding: 12px 16px;
+
+/* ANIMATIONS */
+@keyframes bop{
+    0% {margin-top: calc(39vh);}
+    50% {margin-top: calc(39vh - 12px);}
+    100% {margin-top: calc(39vh);}
 }
