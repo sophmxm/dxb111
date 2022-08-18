@@ -6,12 +6,13 @@
 
 body {
     background-color: var(--blue);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--darkgrey);
     background-image: url(images/pexels-eberhard-grossgasteiger-1367179.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--darkgrey);
+    margin: 0;
 }
 
 header {
@@ -19,9 +20,10 @@ header {
     padding: 12px;
 }
 
-header.index{
+.index header {
     margin-top: 40vh;
     margin-bottom: 45vh;
+    position: relative;
     text-align: center;
 }
 
@@ -31,11 +33,14 @@ nav {
 
 nav>a {
     color: var(--blue);
-    margin-right: 12px;
     text-decoration: none;
+    padding: 6px 12px;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     color: var(--blue);
     font-family: 'Lobster Two', cursive;
 }
@@ -51,34 +56,41 @@ nav>h1 {
 
 h1>a {
     text-decoration: none;
+    padding: 6px;
 }
 
 h1>a:visited {
     color: inherit;
 }
 
-.h-small{
+.h-small {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     color: var(--darkgrey);
     margin-right: 6px;
 }
 
-hr{
+hr {
     border: 1px solid var(--darkgrey);
     margin: 12px 0;
     content: " \22C6 ";
 }
 
-main {
-    margin-top: 6px;
+.index main {
+    position: relative;
 }
 
 .container {
     background-color: var(--white);
     padding: 32px 24px;
     display: block;
-    margin: 24px;
+    margin: 0 32px;
+}
+
+footer{
+    background-color: var(--darkgrey);
+    color: var(--white);
+    padding: 32px 24px;
 }
 
 article {
@@ -88,10 +100,10 @@ article {
     text-align: justify;
 }
 
-article.index{
+.index article {
     padding: 32px 24px;
     display: block;
-    margin: 24px;
+    margin: 32px;
 }
 
 article::after {
@@ -100,9 +112,7 @@ article::after {
     display: table;
 }
 
-article>p,
-a,
-button {
+article>p{
     margin: 12px;
     text-align: justify;
 }
@@ -111,8 +121,9 @@ a {
     color: var(--blue);
 }
 
-.icons {
-    display: inline;
+.divider{
+    display: block;
+    text-align: center;
 }
 
 button {
@@ -127,22 +138,16 @@ section {
 }
 
 /* INDEX EXCLUSIVE */
-.scroll-down{
-    text-align: center;
-    margin-top: calc(39vh);
-    animation: bop 2s infinite;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-}
-
 .arrow-down {
     border: solid var(--white);
-    border-width: 0 6px 6px 0;    
-    display: inline-block;
+    border-width: 0 6px 6px 0;
     padding: 6px;
+    position: absolute;
     transform: rotate(45deg);
-    font-size: 64px;
+    bottom: 48px;
+    left: 50%;
+    right: 50%;
+    animation: bop 2s infinite;
 }
 
 /* WORKS EXCLUSIVE */
@@ -179,8 +184,16 @@ button.btn-external:after {
 
 
 /* ANIMATIONS */
-@keyframes bop{
-    0% {margin-top: calc(39vh);}
-    50% {margin-top: calc(39vh - 12px);}
-    100% {margin-top: calc(39vh);}
+@keyframes bop {
+    0% {
+        bottom: 48px;
+    }
+
+    50% {
+        bottom: calc(48px - 12px);
+    }
+
+    100% {
+        bottom: 48px;
+    }
 }
