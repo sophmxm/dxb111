@@ -12,6 +12,20 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 
 <br />
 
+## To Do
+- [] Footer
+- [] References (hide/show?)
+- [] Description [`index.html`]
+- [] Description [`contact.html`]
+- [] Maybe add some more icons to the socials
+- [] Add some icons to other pages?
+- [] pfp img
+- [] works imgs and info and remove temp imgs
+- [] clean up css, add some titles?
+- [] nav bar what page ur on
+
+<br />
+
 ## Checklist
 ### Basics
 - [x] I have three HTML files named `index.html`, `works.html`, `contact.html`.
