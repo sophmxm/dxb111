@@ -17,31 +17,32 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] I have three HTML files named `index.html`, `works.html`, `contact.html`.
 - [ ] My images have sensible names and are likely stored in a folder called `images`.
 - [ ] My images are optimised (likely as JPG or PNG images).
-- [ ] I have a CSS file with a sensible name.
+- [x] I have a CSS file with a sensible name.
 - [ ] I have validated each of my HTML and CSS files.
 
 <br />
 
 ### For each of my HTML files
 #### Frontmatter
-- [ ] My doctype is specified as HTML as the first line: `<!DOCTYPE html>`.
-- [ ] I have opening and closing `<html>`, `<head>`, `<body>` tags.
-- [ ] My language is specified as English: `<html lang="en">`.
-- [ ] I have `<meta>` tags for: `charset`, `author`, `description`, and `viewport` for each page, where the description is unique to each page.
-- [ ] I have a `<title>` specified inside the `<head>` that is unique to each page.
-- [ ] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site (I have no inline or internal CSS).
+- [x] My doctype is specified as HTML as the first line: `<!DOCTYPE html>`.
+- [x] I have opening and closing `<html>`, `<head>`, `<body>` tags.
+- [x] My language is specified as English: `<html lang="en">`.
+- [x] I have `<meta>` tags for: `charset`, `author`, `description`, and `viewport` for each page, where the description is unique to each page.
+- [x] I have a `<title>` specified inside the `<head>` that is unique to each page.
+- [x] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site
+- [ ] I have no inline or internal CSS.
 
 #### Inside the `<body>` of each page
-- [ ] I have a navigation bar using the `<nav>` tag (possibly but not necessarily inside a `<header>` tag).
+- [x] I have a navigation bar using the `<nav>` tag (possibly but not necessarily inside a `<header>` tag).
   - [ ] This code can be copied and pasted to all three pages, and then changed to make it clear which page is currently active.
-- [ ] I have a footer using the `<footer>` tag.
+- [x] I have a footer using the `<footer>` tag.
   - [ ] This code will typically be the same on all three pages of your site.
-- [ ] I have one and only one top level heading in my page using `<h1>`.
-  - [ ] I am aware that the different heading levels `<h1>`, `<h2>`, `<h3>`, etc. are the only tags that use numbers.
-  - [ ] I’m aware that there can be many `<h2>` headings and that this indicates that they are “second level”.
+- [x] I have one and only one top level heading in my page using `<h1>`.
+  - [x] I am aware that the different heading levels `<h1>`, `<h2>`, `<h3>`, etc. are the only tags that use numbers.
+  - [x] I’m aware that there can be many `<h2>` headings and that this indicates that they are “second level”.
 
 #### Inside my CSS
-- [ ] I have one single CSS file that is used across all three of my pages.
+- [x] I have one single CSS file that is used across all three of my pages.
 - [ ] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
 - [ ] I have sincerely tried to avoid repeating myself too much (and am aware that I can discuss ways to do this with my tutor in week 7).
 - [ ] I have used classes (and possibly IDs where appropriate) to avoid repeating myself too much.
