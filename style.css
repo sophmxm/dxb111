@@ -23,16 +23,19 @@ header {
     z-index: 2;
 }
 
-article {
-    background-color: var(--white);
-    margin: 18px 32px;
-    text-align: justify;
-    position: relative;
-    min-height: 96px;
+main {
+    margin: 24px 32px;
 }
 
-section {
-    margin: 24px 32px;
+article {
+    background-color: var(--white);
+    margin-bottom: 24px;
+    text-align: justify;
+    position: relative;
+}
+
+article.single {
+    min-height: 96px;
 }
 
 footer {
@@ -53,8 +56,12 @@ footer {
     position: relative;
 }
 
-.index article {
+article.padding-large {
     padding: 32px 24px;
+}
+
+article.padding-small {
+    padding: 16px;
 }
 
 nav {
@@ -129,8 +136,28 @@ nav>h1 {
     font-size: 18px;
 }
 
-article>p {
-    margin: 12px;
+.icons>i {
+    color: var(--blue);
+    font-size: 24px;
+    margin-right: 12px;
+    padding: 6px;
+}
+
+i.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.inline {
+    display: inline;
+}
+
+.no-margin-top{
+    margin-top: 0;
+}
+
+.center{
+    text-align: center;
 }
 
 a {
@@ -163,7 +190,7 @@ h1>a:visited {
     animation: bop 2s infinite;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     display: flex;
     align-items: flex-end;
@@ -176,13 +203,13 @@ h1>a:visited {
     text-align: start;
 }
 
-.overlay p{
+.overlay p {
     display: inline;
     flex: 1;
     margin: 6px;
 }
 
-.overlay a{
+.overlay a {
     flex-grow: inherit;
     margin-left: 6px;
 }
@@ -201,7 +228,7 @@ h1>a:visited {
     background-color: lightgrey;
     height: 50px;
     width: 50px;
-    margin: 12px;
+    margin: 0 12px 12px 0;
     float: left;
 }
 
