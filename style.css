@@ -76,10 +76,10 @@ nav>a {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
     color: var(--blue);
     font-family: 'Lobster Two', cursive;
+    text-align: center;
 }
 
 h1 {
@@ -105,13 +105,13 @@ nav>h1 {
 
 .flex {
     display: flex;
+    gap: 6px;
 }
 
 .btn-1 {
     background-color: var(--white);
     padding: 18px 0;
     text-align: center;
-    margin-right: 6px;
 }
 
 .two {
@@ -152,16 +152,49 @@ i.icon {
     display: inline;
 }
 
-.no-margin-top{
+.no-margin-top {
     margin-top: 0;
 }
 
-.center{
+.center {
     text-align: center;
+}
+
+.right{
+    text-align: right;
 }
 
 a {
     color: var(--blue);
+}
+
+footer a{
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+footer table{
+    width: 327px;
+    border-spacing: 12px;
+}
+
+footer table *{
+    margin: 6px 0;
+    vertical-align: top;
+    text-align: left;
+}
+
+footer td{
+    min-width: 64px;
+}
+
+footer td i{
+    margin-right: 12px;
 }
 
 h1>a {
@@ -226,8 +259,8 @@ h1>a:visited {
 
 .pfp {
     background-color: lightgrey;
-    height: 50px;
-    width: 50px;
+    height: 64px;
+    width: 64px;
     margin-right: 12px;
     float: left;
 }
