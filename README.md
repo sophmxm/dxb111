@@ -21,8 +21,8 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [ ] Add some icons to other pages?
 - [ ] pfp img
 - [ ] works imgs and info and remove temp imgs
-- [ ] clean up css, add some titles?
-- [ ] nav bar what page ur on
+- [x] clean up css, add some titles?
+- [x] nav bar what page ur on
 
 <br />
 
