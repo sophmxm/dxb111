@@ -246,6 +246,14 @@ h1>a:visited {
     padding: 6px;
 }
 
+.top{
+    object-position: 100% 0;
+}
+
+.bottom{
+    object-position: 0 100%;
+}
+
 .overlay {
     position: absolute;
     display: flex;
