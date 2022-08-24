@@ -296,12 +296,6 @@ h1>a:visited {
     padding: 16px;
 }
 
-/*** Without any images ***/
-
-.single a{
-    background-color: var(--lightgrey);
-}
-
 /* OTHER */
 .pfp {
     background-color: var(--lightgrey);
