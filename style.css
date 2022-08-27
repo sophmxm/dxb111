@@ -56,7 +56,7 @@ nav>h1 {
     margin-right: 4px;
 }
 
-nav .current{
+nav .current {
     background-color: var(--blue);
     color: var(--white);
 }
@@ -84,12 +84,12 @@ footer {
     padding: 32px 24px;
 }
 
-footer a{
+footer a {
     color: var(--white);
     text-decoration: underline;
 }
 
-footer ul{
+footer ul {
     list-style: none;
     padding-inline-start: 0;
     margin: 0;
@@ -103,29 +103,30 @@ footer li {
     flex-grow: 1;
 }
 
-footer table{
+footer table {
     width: 100%;
     border-spacing: 12px;
 }
 
-footer *{
+footer * {
     vertical-align: top;
     text-align: left;
 }
 
-footer h4, footer p{
+footer h4,
+footer p {
     margin: 6px 0;
 }
 
-footer td{
+footer td {
     min-width: 64px;
 }
 
-footer i{
+footer i {
     color: var(--white);
 }
 
-.about>p:first-of-type{
+.about>p:first-of-type {
     margin-top: 0;
 }
 
@@ -147,11 +148,11 @@ h1 {
     font-size: 32px;
 }
 
-h3{
+h3 {
     margin-bottom: 6px;
 }
 
-h3+p{
+h3+p {
     margin-top: 6px;
 }
 
@@ -163,7 +164,7 @@ h3+p{
 }
 
 /* BUTTONS */
-.buttons{
+.buttons {
     display: flex;
     gap: 6px;
 }
@@ -184,6 +185,11 @@ h3+p{
     padding: 12px;
     text-align: center;
     float: right;
+    margin-left: 6px;
+}
+
+.works section.no-img a {
+    background-color: var(--lightgrey);
 }
 
 .works section a:after {
@@ -192,12 +198,12 @@ h3+p{
 }
 
 /* ICONS */
-i{
+i {
     color: var(--blue);
     margin-right: 12px;
 }
 
-.icons{
+.icons {
     text-align: center;
 }
 
@@ -236,12 +242,12 @@ h1>a:visited {
 }
 
 /* REFERENCES */
-.references p{
+.references p {
     font-size: 12px;
     overflow-wrap: break-word;
 }
 
-.references p:before{
+.references p:before {
     content: "\00bb";
     font-size: 18px;
     margin-right: 6px;
@@ -259,8 +265,11 @@ h1>a:visited {
     padding: 6px;
 }
 
-.works section {
+.works section:not(.no-img){
     position: absolute;
+}
+
+.works section {
     display: flex;
     align-items: flex-end;
     margin: 12px;
@@ -270,29 +279,21 @@ h1>a:visited {
     width: calc(100% - 48px);
     background-color: var(--white-transparent);
     text-align: start;
+    align-items: center;
 }
 
 .works section p {
     display: inline;
     flex: 1;
-    margin: 6px;
+    margin: 6px 0;
 }
 
-.works section a {
-    flex-grow: inherit;
-    margin-left: 6px;
-}
-
-.index article{
+.index article {
     text-align: center;
     padding: 32px 24px;
 }
 
-.works article{
-    min-height: 96px;
-}
-
-.contact article{
+.contact article {
     padding: 16px;
 }
 
@@ -310,7 +311,7 @@ h1>a:visited {
     display: inline;
 }
 
-.right{
+.right {
     text-align: right;
 }
 
