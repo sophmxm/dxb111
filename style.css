@@ -82,6 +82,8 @@ footer {
     color: var(--white);
     margin-top: 32px;
     padding: 32px 24px;
+    vertical-align: top;
+    text-align: left;
 }
 
 footer a {
@@ -106,11 +108,6 @@ footer li {
 footer table {
     width: 100%;
     border-spacing: 12px;
-}
-
-footer * {
-    vertical-align: top;
-    text-align: left;
 }
 
 footer h4,
@@ -304,15 +301,6 @@ h1>a:visited {
     width: 64px;
     margin-right: 12px;
     float: left;
-}
-
-/* KEYWORDS */
-.inline {
-    display: inline;
-}
-
-.right {
-    text-align: right;
 }
 
 .divider {
