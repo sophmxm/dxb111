@@ -1,0 +1,15 @@
+https://stackoverflow.com/questions/7774814/remove-white-space-below-image
+https://www.w3schools.com/howto/howto_css_arrows.asp
+https://stackoverflow.com/questions/43707076/how-does-the-position-sticky-property-work
+https://www.w3schools.com/icons/fontawesome_icons_intro.asp
+https://stackoverflow.com/questions/2835140/how-do-i-link-to-part-of-a-page-hash
+https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
+https://stackoverflow.com/questions/2573544/how-can-i-select-all-children-of-an-element-except-the-last-child
+https://www.w3schools.com/html/html_favicon.asp
+
+## FLEX
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+# ICONS
+https://fontawesome.com/icons/envelope?s=solid
+https://www.w3schools.com/icons/fontawesome_icons_brand.asp
