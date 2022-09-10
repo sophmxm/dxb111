@@ -2,9 +2,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 :root {
-    --white: white;
-    --white-transparent: rgb(255, 255, 255, 0.5);
-    --lightgrey: lightgrey;
+    --white: #ffffff;
+    --white-transparent: #ffffff80;
+    --lightgrey: #d3d3d3;
     --darkgrey: #222;
     --blue: #8BADB6;
 }
