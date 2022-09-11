@@ -14,19 +14,20 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 
 ## To Do
 - [x] Footer
-- [ ] References (hide/show?)
-- [ ] Description [`index.html`]
+- [x] References (hide/show?)
+- [x] Description [`index.html`]
 - [x] Description [`contact.html`]
 - [x] Maybe add some more icons to the socials
-- [ ] Add some icons to other pages?
-- [ ] pfp img
-- [ ] works imgs and info and remove temp imgs
+- [x] pfp img
+- [x] works imgs and info and remove temp imgs
 - [x] clean up css, add some titles?
 - [x] nav bar what page ur on
-- [ ] test turn off js
-- [ ] change footer to flex instead of table??? idk lol
-- [ ] go through css, optimise, make better, get good
-- [ ] css, remove anything that repeats itself
+- [x] test turn off js
+- [x] go through css, optimise, make better, get good
+- [x] css, remove anything that repeats itself
+- [ ] change works imgs
+- [ ] change the icons
+- [ ] w3 validator
 
 <br />
 
@@ -48,7 +49,7 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] I have `<meta>` tags for: `charset`, `author`, `description`, and `viewport` for each page, where the description is unique to each page.
 - [x] I have a `<title>` specified inside the `<head>` that is unique to each page.
 - [x] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site
-- [ ] I have no inline or internal CSS.
+- [x] I have no inline or internal CSS.
 
 #### Inside the `<body>` of each page
 - [x] I have a navigation bar using the `<nav>` tag (possibly but not necessarily inside a `<header>` tag).
@@ -62,11 +63,11 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 #### Inside my CSS
 - [x] I have one single CSS file that is used across all three of my pages.
 - [x] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
-- [ ] I have sincerely tried to avoid repeating myself too much (and am aware that I can discuss ways to do this with my tutor in week 7).
-- [ ] I have used classes (and possibly IDs where appropriate) to avoid repeating myself too much.
+- [x] I have sincerely tried to avoid repeating myself too much (and am aware that I can discuss ways to do this with my tutor in week 7).
+- [x] I have used classes (and possibly IDs where appropriate) to avoid repeating myself too much.
 
 #### Extra things
 - [ ] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
 - [ ] I’ve tested my site on someone else’s computer (e.g. emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
-- [ ] If I’ve used code snippets from examples I’ve used comments in HTML and CSS to show that I understand what is going.
+- [x] If I’ve used code snippets from examples I’ve used comments in HTML and CSS to show that I understand what is going.
