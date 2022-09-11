@@ -201,18 +201,18 @@ i.icon {
 }
 
 i.arrow-down {
-    border: solid var(--white);
-    border-width: 0 6px 6px 0;
-    padding: 6px;
+    border: solid var(--white);     /* colour of the arrow */
+    border-width: 0 6px 6px 0;      /* creates an "∟" shape and determines how thick the arrow is */
+    padding: 6px;                   /* how large/wide the arrow is */
     position: absolute;
-    transform: rotate(45deg);
+    transform: rotate(45deg);       /* rotates the "∟" shape by 45 degrees */
     bottom: 48px;
     left: calc(50% - 6px);
     animation: bop 2s infinite;
 }
 
 /* LINKS */
-a:not(footer a) {
+a:not(footer a) {                   /* selects any <a> links that aren't within the footer */
     color: var(--blue);
 }
 
@@ -229,16 +229,35 @@ h1>a:visited {
     color: inherit;
 }
 
+/* LISTS */
+ul {
+    list-style: none;
+    padding-inline-start: 12px;
+    margin: 0;
+}
+
+.index article ul{
+    font-size: 14px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+li:not(footer li):before {
+    content: "\00bb";
+    font-size: 24px;
+    margin-right: 6px;
+}
+
 /* REFERENCES */
-.references p {
+.references ul {
     font-size: 12px;
     overflow-wrap: break-word;
 }
 
-.references p:before {
-    content: "\00bb";
+.references li:before {
     font-size: 18px;
-    margin-right: 6px;
 }
 
 /* WORKS */
@@ -253,7 +272,7 @@ h1>a:visited {
     padding: 6px;
 }
 
-.works section:not(.no-img){
+.works section:not(.no-img){        /* selects sections that don't have the "no-img" class */
     position: absolute;
 }
 
