@@ -28,7 +28,7 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [ ] change works imgs
 - [ ] change the icons
 - [ ] w3 validator
-- [ ] CC/copyright?
+- [ ] CC/copyright? (`https://creativecommons.org/choose/`)
 
 <br />
 
