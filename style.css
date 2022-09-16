@@ -3,7 +3,7 @@
 
 :root {                             /* root variables used to easily change colours */
     --white: #ffffff;
-    --white-transparent: #ffffff80;
+    --white-transparent: #ffffff90;
     --lightgrey: #d3d3d3;
     --darkgrey: #222;
     --blue: #8BADB6;
@@ -62,10 +62,55 @@ main {
     margin: 24px 32px;
 }
 
+/* ARTICLE */
 article {
     background-color: var(--white);
     margin-bottom: 24px;
     position: relative;
+}
+
+#index article {
+    text-align: center;
+    padding: 16px 24px;
+}
+
+#contact article {
+    padding: 16px;
+}
+
+/* WORKS CONTENT */
+#works article img {
+    background-color: var(--white);
+    width: calc(100% - 12px);
+    height: calc(311px - 12px);
+    position: relative;
+    display: block;
+    object-fit: cover;
+    object-position: 100% 0;
+    padding: 6px;
+}
+
+#works section:not(.no-img){        /* selects sections that don't have the "no-img" class */
+    position: absolute;
+}
+
+#works section {
+    display: flex;
+    align-items: flex-end;
+    margin: 12px;
+    z-index: 1;
+    bottom: 0;
+    padding: 12px;
+    width: calc(100% - 48px);
+    background-color: var(--white-transparent);
+    text-align: start;
+    align-items: center;
+}
+
+#works section p {
+    display: inline;
+    flex: 1;
+    margin: 6px 0;
 }
 
 /* FOOTER */
@@ -110,10 +155,6 @@ footer i {
     color: var(--white);
 }
 
-#about>p:first-of-type {
-    margin-top: 0;
-}
-
 /* HEADERS */
 h1,
 h2,
@@ -130,6 +171,15 @@ h2 {
 h1 {
     margin: 0 0 12px 0;
     font-size: 32px;
+}
+
+h1>a {
+    text-decoration: none;
+    padding: 6px;
+}
+
+h1>a:visited {
+    color: inherit;
 }
 
 h3 {
@@ -220,24 +270,11 @@ a{
     color: inherit;
 }
 
-h1>a {
-    text-decoration: none;
-    padding: 6px;
-}
-
-h1>a:visited {
-    color: inherit;
-}
-
 /* LISTS */
 ul {
     list-style: none;
     padding-inline-start: 12px;
     margin: 0;
-}
-
-#index article ul{
-    font-size: 14px;
 }
 
 li {
@@ -251,57 +288,13 @@ li:not(footer li):before {
 }
 
 /* REFERENCES */
-.references ul {
+#references ul {
     font-size: 12px;
     overflow-wrap: break-word;
 }
 
-.references li:before {
+#references li:before {
     font-size: 18px;
-}
-
-/* WORKS */
-#works article img {
-    background-color: var(--white);
-    width: calc(100% - 12px);
-    height: calc(311px - 12px);
-    position: relative;
-    display: block;
-    object-fit: cover;
-    object-position: 100% 0;
-    padding: 6px;
-}
-
-#works section:not(.no-img){        /* selects sections that don't have the "no-img" class */
-    position: absolute;
-}
-
-#works section {
-    display: flex;
-    align-items: flex-end;
-    margin: 12px;
-    z-index: 1;
-    bottom: 0;
-    padding: 12px;
-    width: calc(100% - 48px);
-    background-color: var(--white-transparent);
-    text-align: start;
-    align-items: center;
-}
-
-#works section p {
-    display: inline;
-    flex: 1;
-    margin: 6px 0;
-}
-
-#index article {
-    text-align: center;
-    padding: 16px 24px;
-}
-
-#contact article {
-    padding: 16px;
 }
 
 /* OTHER */
