@@ -313,6 +313,10 @@ li:not(footer li):before {
     float: left;
 }
 
+.pfp+p{
+    margin-top: 0;
+}
+
 .divider {
     display: block;
     text-align: center;
