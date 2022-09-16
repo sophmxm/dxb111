@@ -90,11 +90,11 @@ article {
     padding: 6px;
 }
 
-#works section:not(.no-img){        /* selects sections that don't have the "no-img" class */
+#works div:not(.no-img){        /* selects divs that don't have the "no-img" class */
     position: absolute;
 }
 
-#works section {
+#works div {
     display: flex;
     align-items: flex-end;
     margin: 12px;
@@ -107,7 +107,7 @@ article {
     align-items: center;
 }
 
-#works section p {
+#works div p {
     display: inline;
     flex: 1;
     margin: 6px 0;
@@ -212,7 +212,7 @@ h2 span {
     width: 100%;
 }
 
-#works section a {
+#works div a {
     background-color: var(--white);
     color: var(--darkgrey);
     text-decoration: none;
@@ -222,11 +222,11 @@ h2 span {
     margin-left: 6px;
 }
 
-#works section.no-img a {
+#works div.no-img a {
     background-color: var(--lightgrey);
 }
 
-#works section a:after {
+#works div a:after {
     content: " \00bb";
     font-size: 18px;
 }
