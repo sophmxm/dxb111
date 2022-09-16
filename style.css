@@ -1,12 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-:root {                             /* root variables used to easily change colours */
+:root {                             /* root variables used to easily change colours and fonts */
     --white: #ffffff;
     --white-transparent: #ffffff90;
     --lightgrey: #d3d3d3;
     --darkgrey: #222;
     --blue: #8BADB6;
+
+    --header: 'Lobster Two', cursive;
+    --paragraph: 'Libre Franklin', sans-serif;
 }
 
 body {
@@ -15,7 +19,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--paragraph);
+    font-size: 14px;
     color: var(--darkgrey);
     margin: 0;
 }
@@ -38,7 +43,7 @@ header {
 
 /* NAV */
 nav {
-    font-size: small;
+    font-size: 12px;
     color: var(--blue);
 }
 
@@ -67,6 +72,7 @@ article {
     background-color: var(--white);
     margin-bottom: 24px;
     position: relative;
+    line-height: 18px;
 }
 
 #index article {
@@ -151,8 +157,9 @@ footer td {
     min-width: 64px;
 }
 
-footer i {
+footer #footer-icons i {
     color: var(--white);
+    font-size: 18px;
 }
 
 /* HEADERS */
@@ -160,7 +167,7 @@ h1,
 h2,
 h3 {
     color: var(--blue);
-    font-family: 'Lobster Two', cursive;
+    font-family: var(--header);
 }
 
 h1,
@@ -191,8 +198,8 @@ h3+p {
 }
 
 h2 span {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-family: var(--paragraph);
+    font-size: 16px;
     color: var(--darkgrey);
     margin-right: 6px;
 }
@@ -222,6 +229,11 @@ h2 span {
     margin-left: 6px;
 }
 
+#works div.no-img {
+    width: auto;
+    margin: 12px 0;
+}
+
 #works div.no-img a {
     background-color: var(--lightgrey);
 }
@@ -246,7 +258,7 @@ i {
     padding: 6px;
 }
 
-i.icon {
+.icon{
     font-size: 20px;
 }
 
@@ -294,7 +306,7 @@ li:not(footer li):before {
 }
 
 #references li:before {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* OTHER */
@@ -313,6 +325,8 @@ li:not(footer li):before {
 .divider {
     display: block;
     text-align: center;
+    font-size: 18px;
+    margin: 12px 0;
 }
 
 
