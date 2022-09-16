@@ -25,9 +25,8 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] test turn off js
 - [x] go through css, optimise, make better, get good
 - [x] css, remove anything that repeats itself
-- [ ] change works imgs
-- [ ] change the icons
-- [ ] w3 validator
+- [x] change the icons
+- [x] w3 validator
 - [ ] CC/copyright? (`https://creativecommons.org/choose/`)
 
 <br />
@@ -38,7 +37,7 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] My images have sensible names and are likely stored in a folder called `images`.
 - [x] My images are optimised (likely as JPG or PNG images).
 - [x] I have a CSS file with a sensible name.
-- [ ] I have validated each of my HTML and CSS files.
+- [x] I have validated each of my HTML and CSS files.
 
 <br />
 
@@ -68,7 +67,7 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] I have used classes (and possibly IDs where appropriate) to avoid repeating myself too much.
 
 #### Extra things
-- [ ] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
+- [x] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
 - [ ] I’ve tested my site on someone else’s computer (e.g. emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
 - [x] If I’ve used code snippets from examples I’ve used comments in HTML and CSS to show that I understand what is going.
