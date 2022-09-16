@@ -252,10 +252,10 @@ i.icon {
 
 i.arrow-down {
     border: solid var(--white);     /* colour of the arrow */
-    border-width: 0 6px 6px 0;      /* creates an "∟" shape and determines how thick the arrow is */
+    border-width: 0 6px 6px 0;      /* creates an "L" shape and determines how thick the arrow is */
     padding: 6px;                   /* how large/wide the arrow is */
     position: absolute;
-    transform: rotate(45deg);       /* rotates the "∟" shape by 45 degrees */
+    transform: rotate(45deg);       /* rotates the "L" shape by 45 degrees */
     bottom: 48px;
     left: calc(50% - 6px);
     animation: bop 2s infinite;
