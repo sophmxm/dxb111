@@ -27,7 +27,7 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] css, remove anything that repeats itself
 - [x] change the icons
 - [x] w3 validator
-- [ ] CC/copyright? (`https://creativecommons.org/choose/`)
+- [x] CC/copyright? (`https://creativecommons.org/choose/`)
 
 <br />
 
