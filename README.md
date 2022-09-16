@@ -68,6 +68,6 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 
 #### Extra things
 - [x] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
-- [ ] I’ve tested my site on someone else’s computer (e.g. emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
+- [x] I’ve tested my site on someone else’s computer (e.g. emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
 - [x] If I’ve used code snippets from examples I’ve used comments in HTML and CSS to show that I understand what is going.
