@@ -4,7 +4,7 @@
 
 :root {                             /* root variables used to easily change colours and fonts */
     --white: #ffffff;
-    --white-transparent: #ffffff90;
+    --transparent: #00000090;
     --lightgrey: #d3d3d3;
     --darkgrey: #222;
     --blue: #8BADB6;
@@ -98,6 +98,8 @@ article {
 
 #works div:not(.no-img){        /* selects divs that don't have the "no-img" class */
     position: absolute;
+    background-color: var(--transparent);
+    color: var(--white);
 }
 
 #works div {
@@ -108,9 +110,13 @@ article {
     bottom: 0;
     padding: 12px;
     width: calc(100% - 48px);
-    background-color: var(--white-transparent);
     text-align: start;
     align-items: center;
+}
+
+#works div.no-img {
+    width: auto;
+    margin: 12px 0;
 }
 
 #works div p {
@@ -227,11 +233,6 @@ h2 span {
     text-align: center;
     float: right;
     margin-left: 6px;
-}
-
-#works div.no-img {
-    width: auto;
-    margin: 12px 0;
 }
 
 #works div.no-img a {
