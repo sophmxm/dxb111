@@ -1,5 +1,5 @@
 # DXB111 » Introduction to web design
-## Assessment 1 » Initial web prototype
+<details><summary><h2>Assessment 1 » Initial web prototype</h2></summary>
 
 ### Description
 You will produce an initial web-based prototype developed using HTML and CSS. This should demonstrate your skills in translating a concept into an effective web-based prototype.
@@ -9,6 +9,9 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 
 ### Due date
 11:59pm on Friday, 16th September 2022
+
+### Format
+ZIP file archive of completed website uploaded through the Assessment 1 submission form on Blackboard.
 
 <br />
 
@@ -71,3 +74,42 @@ You will produce an initial web-based prototype developed using HTML and CSS. Th
 - [x] I’ve tested my site on someone else’s computer (e.g. emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
 - [x] If I’ve used code snippets from examples I’ve used comments in HTML and CSS to show that I understand what is going.
+</details>
+
+<details><summary><h2>Assessment 2 » High-fidelity web prototype</h2></summary>
+
+### Description
+You will produce an initial web-based prototype developed using HTML and CSS. This should demonstrate your skills in translating a concept into an effective web-based prototype.
+
+### Weight
+60%
+
+### Due date
+11:59pm on Friday, 11th November 2022
+
+### Format
+ZIP file archive of your completed website and required documentation uploaded through the Assessment 2 submission form on Blackboard.
+
+<br />
+
+## Checklist
+
+### Frontmatter
+
+### Inside the `<BODY>` of each page
+
+### Inside the CSS
+- [ ] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
+- [ ] I have sincerely tried to avoid repeating myself too much.
+- [ ] I have used groups, classes, the hierarchy (and possibly IDs where appropriate) to avoid repeating myself too.
+much
+
+### Important things
+- [ ] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
+- [ ] I have read and considered each of the items in the Guide to Accessibility for AS2 file that’s in this same folder.
+
+### Rationale
+
+### Extra things
+
+</details>
