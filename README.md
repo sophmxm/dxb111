@@ -168,7 +168,7 @@ Design and implement a responsive website that serves as a travel guide for anyb
 2. Have eight web pages:
   - [ ] One home page (index.html).
   - [ ] Two category pages (e.g., ways to group location pages. Examples: “natural beauty”, “places to shop”, “local characters”, “historical sites”, etc.).
-  - [ ] Four (minimum) different location (or destination/feature/landmark/place) pages. These should each be categorised within at least one of your two categories. (They are indicative of what the site would look like with, say, 20 locations; but we’re not asking you to make those so that you can focus on your design skills)/
+  - [ ] Four (minimum) different location (or destination/feature/landmark/place) pages. These should each be categorised within at least one of your two categories. (They are indicative of what the site would look like with, say, 20 locations; but we’re not asking you to make those so that you can focus on your design skills).
   - [ ] One about page that includes your details, references, and info about the website.
 3. Include a header, nav bar, and footer that are consistent across all of your pages
   - Think about usability and information architecture in considering how users navigate your site
