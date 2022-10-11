@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
+
+:root{
+    --black: #222222;
+    --blue: #48d1cc;
+    --yellow: #ffd700;
+    --beige: #f4ece1;
+}
+
+body{
+    color: var(--black);
+    margin: 0;
+}
+
+div:has(header){
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 100vh;
+    column-gap: 32px;
+    padding: 0 64px;
+}
+
+div:has(header) div:has(img){
+    flex-shrink: 1;
+}
+
+div:has(header) img{
+    width: 100%;
+}
+
+/* div:has(header) header, div:has(header) img{
+    margin: 64px 0;
+} */
+
+body>div>*{
+    margin: 64px 0;
+}
+
+header{
+    background-color: var(--beige);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    box-shadow: 10px 10px #222222;
+    padding: 32px 32px;
+}
+
+header h1{
+    margin: 0;
+}
+
+header nav ul{
+    padding-inline-start: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+header nav ul li{
+    display: block;
+}
+
+header nav ul li:not(:last-child){
+    margin: 32px 0;
+}
+
+header nav ul li a{
+    background-color: var(--yellow);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    color: var(--black);
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+}
+
+h1, h2{
+    text-transform: uppercase;
+    font-family: 'Titan One', cursive;
+}
+
+h1{
+    font-size: 5vw;
+    letter-spacing: 0.2em;
+}
