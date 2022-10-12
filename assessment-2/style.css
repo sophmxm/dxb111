@@ -22,7 +22,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-body>*{
+header, main>*{
     padding: 0 64px;
 }
 
@@ -196,7 +196,7 @@ p {
         font-size: 80%;
     }
 
-    body>*{
+    header, main>*{
         padding: 0 16px;
     }
 
