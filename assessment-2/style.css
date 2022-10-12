@@ -22,7 +22,9 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-header, main>*{
+header,
+footer,
+main>* {
     padding: 0 64px;
 }
 
@@ -133,8 +135,6 @@ h2 {
 }
 
 #featured img {
-    /* height: 500px;
-    width: 550px; */
     width: 100%;
     object-fit: cover;
 }
@@ -164,7 +164,55 @@ p {
 
 #links {
     background-color: var(--blue);
-    height: 100vh;
+    padding: 128px 20vw;
+}
+
+#links>section {
+    background-color: var(--beige);
+    border: 3px solid var(--black);
+    border-radius: 12px;
+    box-shadow: 12px 12px var(--black);
+    width: 100%;
+}
+
+#links>section>h2 {
+    margin: 32px;
+    text-align: center;
+}
+
+#links>section>ul {
+    padding-inline-start: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: var(--font-size-nav);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+#links>section>ul li {
+    display: block;
+    width: calc(50% - 16px);
+}
+
+#links>section>ul li a {
+    background-color: var(--yellow);
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    color: var(--black);
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block;
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--beige);
+    padding-top: 128px;
+    padding-bottom: 128px;
 }
 
 ::-webkit-scrollbar {
@@ -177,14 +225,14 @@ p {
     border-radius: 10px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     body {
         font-size: 60%;
     }
 }
 
 @media (max-width: 375px) {
-    header h1{
+    header h1 {
         white-space: normal;
     }
 
@@ -192,11 +240,13 @@ p {
         flex-direction: column-reverse;
     }
 
-    body{
+    body {
         font-size: 80%;
     }
 
-    header, main>*{
+    header,
+    footer,
+    main>* {
         padding: 0 16px;
     }
 
@@ -204,8 +254,16 @@ p {
         flex-direction: column;
     }
 
-    #featured figure{
+    #featured figure {
         transform: rotate(-8deg) translateX(-8px);
         width: 60%;
+    }
+
+    #links {
+        padding: 128px 16px;
+    }
+
+    #links>section>ul li {
+        width: calc(100%);
     }
 }
