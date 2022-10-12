@@ -20,6 +20,7 @@ body {
     color: var(--black);
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: var(--blue);
 }
 
 header, main>*{
@@ -27,15 +28,17 @@ header, main>*{
 }
 
 header {
-    background-color: var(--blue);
+    background-color: var(--beige);
+    border: 3px solid var(--black);
+    border-radius: 12px;
+    box-shadow: 12px 12px var(--black);
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    column-gap: 5vw;
-    row-gap: 2vh;
-    padding-left: 128px;
+    margin: 32px;
+    top: 32px;
+    position: sticky;
+    z-index: 1;
 }
 
 header div:has(img) {
@@ -47,16 +50,8 @@ header img {
     width: 100%;
 }
 
-nav {
-    background-color: var(--beige);
-    border: 3px solid var(--black);
-    border-radius: 12px;
-    box-shadow: 12px 12px var(--black);
-    width: 100%;
-}
-
 header h1 {
-    margin: 32px 32px;
+    margin: 0 32px;
     white-space: nowrap;
 }
 
@@ -71,15 +66,15 @@ header nav ul {
     font-size: var(--font-size-nav);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin: 32px 32px;
+    margin: 0 32px;
 }
 
 header nav ul li {
-    display: block;
+    display: inline-block;
 }
 
 header nav ul li:not(:last-child) {
-    margin: 32px 0;
+    margin-right: 16px;
 }
 
 header nav ul li a {
