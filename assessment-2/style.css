@@ -34,7 +34,7 @@ header {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     column-gap: 5vw;
     row-gap: 2vh;
     padding-left: 128px;
@@ -45,7 +45,6 @@ header div:has(img) {
 }
 
 header img {
-    height: 60vh;
     width: 100%;
 }
 
@@ -54,7 +53,6 @@ nav {
     border: 3px solid var(--black);
     border-radius: 12px;
     box-shadow: 12px 12px var(--black);
-    width: 100%;
 }
 
 header h1 {
@@ -95,7 +93,8 @@ header nav ul li a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     text-transform: uppercase;
     font-family: 'Nerko One', cursive;
     margin: 0;
@@ -110,12 +109,34 @@ h2 {
     font-size: var(--font-size-h2);
 }
 
+h3 {
+    font-size: var(--font-size-h2);
+}
+
 #featured {
     background-color: var(--beige);
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 32px;
+    column-gap: 96px;
+    row-gap: 2vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#featured>h2 {
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#featured>section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 96px;
     row-gap: 2vh;
 }
 
@@ -125,6 +146,7 @@ h2 {
     width: 80%;
     transform: rotate(-8deg) translateY(72px);
     box-shadow: 12px 12px var(--black);
+    flex-grow: 1;
 }
 
 #featured figure figcaption {
@@ -139,7 +161,7 @@ h2 {
     object-fit: cover;
 }
 
-#featured>section {
+#featured>section>section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -147,13 +169,13 @@ h2 {
     width: 80%;
 }
 
-#featured>section>section:first-of-type>p:last-of-type::before {
+#featured>section>section>section:first-of-type>p:last-of-type::before {
     content: "\2014";
     margin-right: 12px;
     padding-left: 36px;
 }
 
-#featured>section>section:last-of-type {
+#featured>section>section>section:last-of-type {
     color: var(--blue);
     font-weight: bold;
 }
@@ -172,7 +194,7 @@ p {
     border: 3px solid var(--black);
     border-radius: 12px;
     box-shadow: 12px 12px var(--black);
-    width: 100%;
+    width: calc(100% - 24px);
 }
 
 #links>section>h2 {
@@ -195,18 +217,46 @@ p {
 
 #links>section>ul li {
     display: block;
-    width: calc(50% - 16px);
+    flex-grow: 1;
 }
 
 #links>section>ul li a {
     background-color: var(--yellow);
     border: 3px solid var(--black);
     border-radius: 10px;
+    display: block;
     color: var(--black);
     text-decoration: none;
     padding: 12px 24px;
-    display: block;
 }
+
+/*
+#links>section>ul li a {
+    color: var(--black);
+    text-decoration: none;
+    position: relative;
+}
+
+#links>section>ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--black);
+    left: 0;
+}
+
+#links>section>ul li:hover a::after{
+    width: 100%;
+    animation: link 500ms ease-in-out;
+}
+
+@keyframes link{
+    from{width: 0;}
+    to{width: 100%;}
+}
+*/
 
 footer {
     background-color: var(--black);
@@ -226,22 +276,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 60%;
-    }
+    body {}
 }
 
 @media (max-width: 375px) {
-    header h1 {
-        white-space: normal;
-    }
-
-    header {
-        flex-direction: column-reverse;
-    }
-
-    body {
-        font-size: 80%;
+    :root {
+        --font-size-h1: 6em;
+        --font-size-h2: 3.5em;
+        --font-size-nav: 1.5em;
+        --font-size-p: 1em;
     }
 
     header,
@@ -250,8 +293,22 @@ footer {
         padding: 0 16px;
     }
 
+    header h1 {
+        white-space: normal;
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column-reverse;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    body {}
+
     #featured {
         flex-direction: column;
+        text-align: center;
     }
 
     #featured figure {
@@ -260,7 +317,7 @@ footer {
     }
 
     #links {
-        padding: 128px 16px;
+        padding: 32px 16px;
     }
 
     #links>section>ul li {
