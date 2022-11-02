@@ -22,20 +22,21 @@ header {
     justify-content: space-between;
     width: calc(100% - 24px);
     padding: 12px;
+    z-index: 2;
 }
 
-header>nav{
+header>nav {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-header>nav a{
+header>nav a {
     color: #7cb3c5;
     text-decoration: none;
     font-weight: bold;
 }
 
-header>nav ul{
+header>nav ul {
     padding-inline-start: 0;
     margin: 0;
 }
@@ -45,11 +46,14 @@ header>nav li {
     margin-left: 12px;
 }
 
-h1 {
+h1, h2{
     font-family: 'Chango', cursive;
+    margin: 0;
+}
+
+h1 {
     font-size: 24px;
     letter-spacing: -3px;
-    margin: 0;
 }
 
 h1 span {
@@ -57,7 +61,7 @@ h1 span {
     letter-spacing: 0px;
 }
 
-h1>a{
+h1>a {
     color: #222222;
     text-decoration: none;
 }
@@ -71,44 +75,62 @@ main {
 
 #frontpage {
     background-color: #7cb3c5;
-    /* background-image: linear-gradient(#73ccff, #3ab2f7, #3ab2f7, #1394df 80vh); */
+    background-image: url(clouds.svg), linear-gradient(#7cb3c5, #a4cedb);
+    background-repeat: repeat;
+    background-position: 0 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     gap: 24px;
     flex-grow: 1;
+    animation: background-clouds 5000ms linear infinite;
+    height: 80vh;
 }
 
-svg.clouds{
+@keyframes background-clouds {
+
+    to {
+        background-position: 500px 0;
+    }
+}
+
+object[data="clouds.svg"] {
     position: absolute;
     height: 100vh;
     width: 100%;
+
 }
 
-svg.clouds>g>use{
-    animation: clouds 25000ms linear infinite;
+object[data="clouds.svg"] {
+    animation: clouds 5000ms linear infinite;
 }
 
-@keyframes clouds{
-    0%{ transform: translate3d(0, 0, 0);}
-    100%{transform: translate3d(1000px, 0, 0);}
+@keyframes clouds {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(100vw, 0, 0);
+    }
 }
 
-svg.hills{
+svg.hills {
     position: absolute;
     height: 20vh;
     width: 100%;
     bottom: 20vh;
 }
 
-#frontpage>section{
+#frontpage>section {
     display: flex;
     margin: 0 32px;
     gap: 12px;
+    z-index: 1;
 }
 
-#frontpage>section a{
+#frontpage>section a {
     padding: 8px 6px;
     flex-grow: 1;
     background-color: var(--white);
@@ -119,4 +141,22 @@ svg.hills{
     font-weight: bold;
     color: #222222;
     text-decoration: none;
+}
+
+main>section:nth-of-type(2){
+    background-color: #a4cedb;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+main>section:nth-of-type(2)>section{
+    background-color: var(--white);
+    margin: 0 32px;
+    padding: 12px;
+    border-radius: 3px;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
 }

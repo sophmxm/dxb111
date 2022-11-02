@@ -1,0 +1,58 @@
+<svg class="clouds" version="1.1" xmlns="http://www.w3.org/2000/svg" width="500px" height="100%">
+    <defs>
+        <pattern id="cloud-medium" viewBox="0 0 185 60" width="10" height="10" y="1" x="1" >
+            <path
+                d="M0 60 Q20 30 40 45 L40 45 Q60 20 80 40 L80 40 Q110 0 140 40 L140 40 L140 40 Q170 30 185 60 L185 60 Q90 58 0 60 Z"
+                fill="pink" />
+        </pattern>
+        <g id="cloud-small">
+            <path d="M0 60 Q15 40 30 50 L30 50 Q40 40 50 60 L50 60 Q25 59 0 60 Z" fill="white" />
+        </g>
+        <g id="cloud-medium-setup">
+    <rect width="100%" height="100%" fill="url(#cloud-medium)" />
+    <!--
+    <rect width="350" height="350" x="180" y="120" fill="url(#cloud-medium)" />-->
+            <!-- <use href="#cloud-medium" x="20" y="60" />
+            <use href="#cloud-medium" x="280" y="120" />
+            <use href="#cloud-medium" x="50" y="240" />
+            <use href="#cloud-medium" x="250" y="320" />
+            <use href="#cloud-medium" x="300" y="480" />
+            <use href="#cloud-medium" x="80" y="520" />
+            <use href="#cloud-medium" x="220" y="640" />
+            <use href="#cloud-medium" x="0" y="700" /> -->
+        </g>
+    </defs>
+    <g>
+        <use href="#cloud-medium-setup" x="500" y="0" />
+        <use href="#cloud-medium-setup" x="0" y="0" />
+        <use href="#cloud-medium-setup" x="-500" y="0" />
+    </g>
+</svg>
+
+<!-- <svg class="clouds" version="1.1" xmlns="http://www.w3.org/2000/svg" width="500px" height="100%">
+    <defs>
+        <g id="cloud-medium">
+            <path
+                d="M0 60 Q20 30 40 45 L40 45 Q60 20 80 40 L80 40 Q110 0 140 40 L140 40 L140 40 Q170 30 185 60 L185 60 Q90 58 0 60 Z"
+                fill="pink" />
+        </g>
+        <g id="cloud-small">
+            <path d="M0 60 Q15 40 30 50 L30 50 Q40 40 50 60 L50 60 Q25 59 0 60 Z" fill="white" />
+        </g>
+        <g id="cloud-medium-setup">
+            <use href="#cloud-medium" x="20" y="60" />
+            <use href="#cloud-medium" x="280" y="120" />
+            <use href="#cloud-medium" x="50" y="240" />
+            <use href="#cloud-medium" x="250" y="320" />
+            <use href="#cloud-medium" x="300" y="480" />
+            <use href="#cloud-medium" x="80" y="520" />
+            <use href="#cloud-medium" x="220" y="640" />
+            <use href="#cloud-medium" x="0" y="700" />
+        </g>
+    </defs>
+    <g>
+        <use href="#cloud-medium-setup" x="500" y="0" />
+        <use href="#cloud-medium-setup" x="0" y="0" />
+        <use href="#cloud-medium-setup" x="-500" y="0" />
+    </g>
+</svg> -->
