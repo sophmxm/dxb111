@@ -49,6 +49,7 @@ header>nav li {
 h1, h2{
     font-family: 'Chango', cursive;
     margin: 0;
+    margin-bottom: 12px;
 }
 
 h1 {
@@ -148,6 +149,7 @@ main>section:nth-of-type(2){
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-bottom: 24px;
 }
 
 main>section:nth-of-type(2)>section{
@@ -157,6 +159,46 @@ main>section:nth-of-type(2)>section{
     border-radius: 3px;
 }
 
+main>section:nth-of-type(2)>section>a{
+    background-color: #7cb3c5;
+    margin: 16px 0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+#featured>section:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+}
+
+#featured>section:nth-of-type(1)>img{
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+#featured>section:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#featured>section:nth-of-type(2)>h2{
+    flex-grow: 1;
+    width: 100%;
+}
+
+#featured>section:nth-of-type(2)>img{
+}
+
 p:last-of-type{
     margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px){
+    main>section:nth-of-type(2){
+        
+    }
 }
