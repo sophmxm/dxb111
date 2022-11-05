@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 :root {
     --white: #ffffff;
     --black: #222222;
-    --blue: #48d1cc;
-    --yellow: #ffd700;
+    --blue: #7cb3c5;
+    --light-blue: #a4cedb;
+    --dark-blue: #5e98ac;
 }
 
 body {
@@ -31,7 +33,7 @@ header>nav {
 }
 
 header>nav a {
-    color: #7cb3c5;
+    color: var(--dark-blue);
     text-decoration: none;
     font-weight: bold;
 }
@@ -46,9 +48,16 @@ header>nav li {
     margin-left: 12px;
 }
 
-h1, h2{
+h1,
+h2,
+h3 {
     font-family: 'Chango', cursive;
     margin: 0;
+}
+
+section>h1,
+section>h2,
+section>h3 {
     margin-bottom: 12px;
 }
 
@@ -75,8 +84,8 @@ main {
 }
 
 #frontpage {
-    background-color: #7cb3c5;
-    background-image: url(clouds.svg), linear-gradient(#7cb3c5, #a4cedb);
+    background-color: var(--blue);
+    background-image: url(clouds.svg), linear-gradient(var(--blue), var(--light-blue));
     background-repeat: repeat;
     background-position: 0 0;
     display: flex;
@@ -86,7 +95,7 @@ main {
     gap: 24px;
     flex-grow: 1;
     animation: background-clouds 5000ms linear infinite;
-    height: 80vh;
+    height: 100vh;
 }
 
 @keyframes background-clouds {
@@ -126,7 +135,7 @@ svg.hills {
 
 #frontpage>section {
     display: flex;
-    margin: 0 32px;
+    margin: 0 16px;
     gap: 12px;
     z-index: 1;
 }
@@ -135,70 +144,119 @@ svg.hills {
     padding: 8px 6px;
     flex-grow: 1;
     background-color: var(--white);
-    border: 1px solid #222222;
-    box-shadow: 5px 5px #222222;
+    border: 1px solid var(--black);
+    box-shadow: 5px 5px var(--black);
     border-radius: 3px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #222222;
+    color: var(--black);
     text-decoration: none;
 }
 
-main>section:nth-of-type(2){
-    background-color: #a4cedb;
+main>section:nth-of-type(2) {
+    background-color: var(--light-blue);
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding-bottom: 24px;
 }
 
-main>section:nth-of-type(2)>section{
-    background-color: var(--white);
-    margin: 0 32px;
+main>section:nth-of-type(2)>section,
+#featured>section>section {
+    margin: 0 16px;
     padding: 12px;
+}
+
+main>section:nth-of-type(2)>section:not(#featured),
+#featured>section>section {
+    background-color: var(--white);
     border-radius: 3px;
 }
 
-main>section:nth-of-type(2)>section>a{
-    background-color: #7cb3c5;
+#links>a {
+    background-color: var(--blue);
     margin: 16px 0;
     padding: 2px 8px;
     border-radius: 3px;
-    color: #222222;
+    color: var(--white);
     text-decoration: none;
-    font-weight: bold;
     display: block;
 }
 
-#featured>section:nth-of-type(1){
-    display: flex;
-    flex-direction: column;
+#featured {
+    padding: 0;
 }
 
-#featured>section:nth-of-type(1)>img{
+#featured>section {
+    display: flex;
+    flex-direction: row;
+}
+
+#featured figure {
+    background-color: var(--white);
+    padding: 12px;
+    width: 60%;
+    transform: rotate(-8deg);
+    box-shadow: 12px 12px var(--black);
+    border: 1px solid #222222;
+    border-radius: 3px;
     flex-grow: 1;
+}
+
+#featured figure figcaption {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+#featured img {
+    width: 100%;
     object-fit: cover;
 }
 
-#featured>section:nth-of-type(2){
+#featured>section>section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
 }
 
-#featured>section:nth-of-type(2)>h2{
+#featured>section>section>section:first-of-type {
+    margin-bottom: 24px;
+}
+
+#featured>section>section>section:first-of-type>p:last-of-type::before {
+    content: "\2014";
+    margin-right: 12px;
+    padding-left: 12px;
+}
+
+#featured>section>section>section:last-of-type {
+    margin-top: auto;
+    color: var(--dark-blue);
+}
+
+#gallery>section {
+    display: flex;
+    column-gap: 2px;
+    overflow-x: auto;
+}
+
+#gallery>section>h2 {
     flex-grow: 1;
     width: 100%;
 }
 
-#featured>section:nth-of-type(2)>img{
+#gallery>section>img {
+    height: 150px;
+    object-fit: cover;
 }
 
-p:last-of-type{
-    margin-bottom: 0;
+@media only screen and (max-width: 768px) {
+    main>section:nth-of-type(2) {}
 }
 
-@media only screen and (max-width: 768px){
-    main>section:nth-of-type(2){
-        
+@media only screen and (max-width: 1440px) {
+    #featured>section {
+        flex-direction: column;
     }
 }
