@@ -13,8 +13,9 @@
 
 body {
     margin: 0;
-    color: #222222;
+    color: var(--black);
     font-family: 'Mukta', sans-serif;
+    background-color: var(--light-blue);
 }
 
 header {
@@ -154,53 +155,57 @@ svg.hills {
 }
 
 main>section:nth-of-type(2) {
-    background-color: var(--light-blue);
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
+    border-radius: 3px 3px 0 0;
 }
 
 main>section:nth-of-type(2)>section,
 #featured>section>section {
     margin: 0 16px;
+}
+
+main>section:nth-of-type(2)>section:not(#featured, #general),
+#general>section,
+#featured>section {
+    background-color: #efefef;
     padding: 12px;
-}
-
-main>section:nth-of-type(2)>section:not(#featured),
-#featured>section>section {
-    background-color: var(--white);
     border-radius: 3px;
-}
-
-#links>a {
-    background-color: var(--blue);
-    margin: 16px 0;
-    padding: 2px 8px;
-    border-radius: 3px;
-    color: var(--white);
-    text-decoration: none;
-    display: block;
+    border: 1px solid #dddddd;
 }
 
 #featured {
-    padding: 0;
+    display: grid;
+    grid-template:
+        "header"
+        "picture"
+        "text"
+        "email";
+    gap: 12px;
+    background-color: var(--black);
+    padding: 0 24px;
 }
 
-#featured>section {
-    display: flex;
-    flex-direction: row;
+#featured>h2 {
+    grid-area: header;
 }
 
 #featured figure {
+    grid-area: picture;
     background-color: var(--white);
+    margin: 24px;
     padding: 12px;
-    width: 60%;
     transform: rotate(-8deg);
     box-shadow: 12px 12px var(--black);
     border: 1px solid #222222;
     border-radius: 3px;
-    flex-grow: 1;
+    min-width: 220px;
+    max-width: 280px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #featured figure figcaption {
@@ -214,49 +219,117 @@ main>section:nth-of-type(2)>section:not(#featured),
     object-fit: cover;
 }
 
-#featured>section>section {
-    display: flex;
-    flex-direction: column;
+#featured>section {
+    grid-area: text;
     margin: 0;
 }
 
-#featured>section>section>section:first-of-type {
-    margin-bottom: 24px;
+#featured>section>h3 {
+    text-align: center;
 }
 
-#featured>section>section>section:first-of-type>p:last-of-type::before {
+#featured>section>p:last-of-type {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#featured>section>p:last-of-type::before {
     content: "\2014";
     margin-right: 12px;
-    padding-left: 12px;
+    padding-left: -12px;
 }
 
-#featured>section>section>section:last-of-type {
-    margin-top: auto;
-    color: var(--dark-blue);
+#featured>section+p {
+    grid-area: email;
+    color: var(--white);
+    padding: 0 6px;
+    text-align: center;
+}
+
+#general {
+    display: grid;
+    grid-template:
+        "gallery"
+        "links";
+    gap: 24px;
+}
+
+#questions {
+    grid-area: questions;
+}
+
+#gallery {
+    grid-area: gallery;
+    position: relative;
+    overflow-x: auto;
 }
 
 #gallery>section {
-    display: flex;
+    display: grid;
+    grid-template:
+        auto / repeat(13, 165px);
     column-gap: 2px;
     overflow-x: auto;
 }
 
-#gallery>section>h2 {
-    flex-grow: 1;
-    width: 100%;
-}
-
 #gallery>section>img {
-    height: 150px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-@media only screen and (max-width: 768px) {
-    main>section:nth-of-type(2) {}
+/* #gallery>p {
+    text-align: right;
+    margin: 0;
 }
 
-@media only screen and (max-width: 1440px) {
-    #featured>section {
-        flex-direction: column;
+#gallery>p>a {
+    text-decoration: none;
+}
+
+#gallery>p>a::after {
+    content: "\2192";
+    padding-left: 12px;
+} */
+
+#links {
+    grid-area: links;
+}
+
+#links>a {
+    background-color: var(--blue);
+    margin: 16px 0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    #facts {
+        flex-direction: row;
+    }
+
+    #featured {
+        grid-template:
+            "header header"
+            "picture text"
+            "picture email"
+            / auto;
+        margin-bottom: 24px;
+    }
+
+    #general {
+        grid-template:
+            "gallery links"
+            / auto 30%;
+        gap: 12px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    main>section:nth-of-type(2) {
+        margin: 0 10%;
     }
 }
