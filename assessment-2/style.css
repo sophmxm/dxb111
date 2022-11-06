@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
 
 :root {
     --white: #ffffff;
@@ -9,6 +10,8 @@
     --blue: #7cb3c5;
     --light-blue: #a4cedb;
     --dark-blue: #5e98ac;
+    --yellow: #f5deb3;
+    --dark-yellow: #d1af6f;
 }
 
 body {
@@ -23,20 +26,24 @@ header {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 24px);
-    padding: 12px;
+    width: 100%;
     z-index: 2;
+    align-items: center;
 }
 
+header>h1,
 header>nav {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 0 6px;
 }
 
 header>nav a {
     color: var(--dark-blue);
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 
 header>nav ul {
@@ -46,13 +53,20 @@ header>nav ul {
 
 header>nav li {
     display: inline-block;
-    margin-left: 12px;
+    padding: 12px 8px;
+    transition: 200ms ease-in-out;
+}
+
+header>nav li:hover {
+    background-color: #efefef;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Chango', cursive;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
     margin: 0;
 }
 
@@ -63,13 +77,17 @@ section>h3 {
 }
 
 h1 {
-    font-size: 24px;
-    letter-spacing: -3px;
+    font-size: 28px;
+    letter-spacing: -2px;
+    padding-left: 12px;
 }
 
 h1 span {
     font-family: 'Vibur', cursive;
     letter-spacing: 0px;
+    margin-left: 6px;
+    word-spacing: -4px;
+    text-transform: lowercase;
 }
 
 h1>a {
@@ -91,6 +109,7 @@ main {
     background-position: 0 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
     gap: 24px;
@@ -134,7 +153,7 @@ svg.hills {
     bottom: 20vh;
 }
 
-#frontpage>section {
+#frontpage section:has(>a) {
     display: flex;
     margin: 0 16px;
     gap: 12px;
@@ -175,6 +194,13 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
     padding: 12px;
     border-radius: 3px;
     border: 1px solid #dddddd;
+    box-shadow: 0 0 10px #efefef;
+}
+
+main>section:nth-of-type(2)>section#facts {
+    background-color: var(--yellow);
+    border-color: var(--dark-yellow);
+    box-shadow: 0 0 5px var(--yellow);
 }
 
 #featured {
@@ -185,8 +211,7 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
         "text"
         "email";
     gap: 12px;
-    background-color: var(--black);
-    padding: 0 24px;
+    padding: 0 12px;
 }
 
 #featured>h2 {
@@ -200,12 +225,11 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
     padding: 12px;
     transform: rotate(-8deg);
     box-shadow: 12px 12px var(--black);
-    border: 1px solid #222222;
+    border: 1px solid var(--black);
     border-radius: 3px;
     min-width: 220px;
     max-width: 280px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 24px;
 }
 
 #featured figure figcaption {
@@ -241,7 +265,7 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
 
 #featured>section+p {
     grid-area: email;
-    color: var(--white);
+    color: var(--dark-blue);
     padding: 0 6px;
     text-align: center;
 }
@@ -261,21 +285,47 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
 #gallery {
     grid-area: gallery;
     position: relative;
-    overflow-x: auto;
 }
 
-#gallery>section {
+#gallery section {
     display: grid;
     grid-template:
-        auto / repeat(13, 165px);
+        auto / repeat(6, 1fr);
     column-gap: 2px;
-    overflow-x: auto;
 }
 
-#gallery>section>img {
+#gallery img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: 350ms ease-in-out;
+    transition-delay: 100ms;
+}
+
+#gallery section:has(img:hover) img:not(:hover) {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+#gallery a{
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#gallery figure {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#gallery figcaption {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 
 /* #gallery>p {
@@ -307,6 +357,18 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
 }
 
 @media only screen and (min-width: 768px) {
+
+    header>h1,
+    header>nav {
+        margin: 0 16px;
+    }
+
+    #frontpage {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding: 0 10%;
+    }
+
     #facts {
         flex-direction: row;
     }
@@ -318,6 +380,12 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
             "picture email"
             / auto;
         margin-bottom: 24px;
+        padding-right: 0;
+    }
+
+    #featured>figure {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     #general {
