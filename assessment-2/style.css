@@ -25,15 +25,11 @@ header {
     background-color: var(--white);
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     z-index: 2;
     align-items: center;
-}
-
-header>h1,
-header>nav {
-    margin: 0 6px;
 }
 
 header>nav a {
@@ -43,7 +39,7 @@ header>nav a {
     font-family: 'Rubik', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 header>nav ul {
@@ -53,7 +49,7 @@ header>nav ul {
 
 header>nav li {
     display: inline-block;
-    padding: 12px 8px;
+    padding: 4px 8px;
     transition: 200ms ease-in-out;
 }
 
@@ -73,13 +69,16 @@ h3 {
 section>h1,
 section>h2,
 section>h3 {
+    margin-top: 12px;
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: -2px;
-    padding-left: 12px;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 4px;
 }
 
 h1 span {
@@ -284,14 +283,15 @@ main>section:nth-of-type(2)>section#facts {
 
 #gallery {
     grid-area: gallery;
-    position: relative;
-}
-
-#gallery section {
     display: grid;
     grid-template:
-        auto / repeat(6, 1fr);
+        1fr / auto auto;
+    row-gap: 6px;
     column-gap: 2px;
+}
+
+#gallery>a:last-of-type {
+    grid-column: span 2;
 }
 
 #gallery img {
@@ -302,15 +302,16 @@ main>section:nth-of-type(2)>section#facts {
     transition-delay: 100ms;
 }
 
-#gallery section:has(img:hover) img:not(:hover) {
+#gallery:has(img:hover) img:not(:hover) {
     opacity: 0.7;
     transform: scale(0.95);
 }
 
-#gallery a{
+#gallery a {
     display: block;
     text-decoration: none;
     color: var(--black);
+    overflow: hidden;
 }
 
 #gallery figure {
@@ -325,7 +326,6 @@ main>section:nth-of-type(2)>section#facts {
     font-family: 'Rubik', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
 }
 
 /* #gallery>p {
@@ -357,10 +357,29 @@ main>section:nth-of-type(2)>section#facts {
 }
 
 @media only screen and (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
 
     header>h1,
     header>nav {
         margin: 0 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+        padding-left: 12px;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    header>nav li {
+        padding: 12px 8px;
+    }
+
+    header>nav a {
+        font-size: 18px;
     }
 
     #frontpage {
@@ -386,6 +405,19 @@ main>section:nth-of-type(2)>section#facts {
     #featured>figure {
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    #gallery {
+        grid-template:
+            200px / repeat(7, 1fr);
+    }
+
+    #gallery>a:last-of-type {
+        grid-column: auto;
+    }
+
+    #gallery figcaption {
+        font-size: 18px;
     }
 
     #general {
