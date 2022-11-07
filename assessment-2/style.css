@@ -328,25 +328,11 @@ main>section:nth-of-type(2)>section#facts {
     text-transform: uppercase;
 }
 
-/* #gallery>p {
-    text-align: right;
-    margin: 0;
-}
-
-#gallery>p>a {
-    text-decoration: none;
-}
-
-#gallery>p>a::after {
-    content: "\2192";
-    padding-left: 12px;
-} */
-
 #links {
     grid-area: links;
 }
 
-#links>a {
+/* #links>a {
     background-color: var(--blue);
     margin: 16px 0;
     padding: 2px 8px;
@@ -354,6 +340,29 @@ main>section:nth-of-type(2)>section#facts {
     color: var(--white);
     text-decoration: none;
     display: block;
+} */
+
+#links>a {
+    padding: 8px 0px;
+    color: var(--black);
+    border-bottom: 1px solid #dddddd;
+    text-decoration: none;
+    display: block;
+}
+
+#links>a:last-of-type{
+    border-bottom: none;
+}
+
+#links>a::after{
+    content: "\00bb";
+    float: right;
+    margin-right: 18px;
+    transition: 350ms;
+}
+
+#links>a:hover::after{
+    margin-right: 10px;
 }
 
 @media only screen and (min-width: 768px) {
