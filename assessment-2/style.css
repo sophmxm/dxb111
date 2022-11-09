@@ -37,6 +37,10 @@ header {
     align-items: center;
 }
 
+header>nav{
+    text-align: center;
+}
+
 header>nav a {
     color: var(--dark-blue);
     text-decoration: none;
@@ -81,9 +85,9 @@ section>h3 {
 h1 {
     font-size: 24px;
     letter-spacing: -2px;
-    flex-grow: 1;
     text-align: center;
     margin-top: 4px;
+    width: 100%;
 }
 
 h1 span {
@@ -101,7 +105,6 @@ h1>a {
 
 main {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     justify-items: center;
 }
@@ -177,21 +180,22 @@ svg.hills {
     text-decoration: none;
 }
 
-main>section:nth-of-type(2) {
+#main-content {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 24px 0;
     border-radius: 3px 3px 0 0;
+    margin-top: 12vh;
 }
 
-main>section:nth-of-type(2)>section,
+#main-content>section,
 #featured>section>section {
     margin: 0 16px;
 }
 
-main>section:nth-of-type(2)>section:not(#featured, #general),
+#main-content>section:not(#featured, #general),
 #general>section,
 #featured>section {
     background-color: var(--light-grey);
@@ -201,7 +205,7 @@ main>section:nth-of-type(2)>section:not(#featured, #general),
     box-shadow: 0 0 10px var(--light-grey);
 }
 
-main>section:nth-of-type(2)>section#facts {
+#main-content>section#facts {
     background-color: var(--yellow);
     border-color: var(--dark-yellow);
     box-shadow: 0 0 5px var(--yellow);
@@ -426,14 +430,16 @@ footer a:hover::before{
         padding-left: 12px;
         text-align: left;
         margin-top: 0;
-    }
-
-    header>nav li {
-        padding: 12px 8px;
+        width: auto;
     }
 
     header>nav a {
         font-size: 18px;
+        padding: 8px;
+    }
+
+    #main-content{
+        margin-top: 10vh;
     }
 
     #frontpage {
@@ -484,16 +490,18 @@ footer a:hover::before{
 
 @media only screen and (min-width: 1080px) {
 
-    main>section:nth-of-type(2),
+    #main-content,
     footer {
-        margin: 0 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
 @media only screen and (min-width: 1440px) {
 
-    main>section:nth-of-type(2),
+    #main-content,
     footer {
-        margin: 0 10%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
