@@ -89,7 +89,8 @@ section>h3 {
     margin-bottom: 12px;
 }
 
-#main-content>h2, #main-content>p{
+#main-content>h2,
+#main-content>p {
     margin-left: 12px;
     margin-right: 12px;
 }
@@ -243,21 +244,27 @@ main:not(:has(#frontpage, #breadcrumbs)) {
     margin-top: 8vh;
 }
 
-#main-content>section:not(#featured, #general, #places),
-#general>section,
-#featured>section,
-#places>section {
-    background-color: var(--light-grey);
+section.box {
     padding: 12px;
     border-radius: 3px;
+}
+
+section.box.grey {
+    background-color: var(--light-grey);
     border: 1px solid var(--grey);
     box-shadow: 0 0 10px var(--light-grey);
 }
 
-#main-content>section#facts {
+section.box.yellow {
     background-color: var(--yellow);
-    border-color: var(--dark-yellow);
+    border: 1px solid var(--dark-yellow);
     box-shadow: 0 0 5px var(--yellow);
+}
+
+section.box.blue {
+    background-color: var(--light-blue);
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 3px var(--light-blue);
 }
 
 #featured {
@@ -332,9 +339,16 @@ main:not(:has(#frontpage, #breadcrumbs)) {
 #general {
     display: grid;
     grid-template:
-        "gallery"
-        "links";
+        auto / auto;
     gap: 24px;
+}
+
+#general>section:nth-of-type(2)>p:first-of-type{
+    margin-top: 0;
+}
+
+#general>section:nth-of-type(2)>p:last-of-type{
+    margin-bottom: 0;
 }
 
 #questions {
@@ -389,7 +403,7 @@ main:not(:has(#frontpage, #breadcrumbs)) {
 }
 
 #links {
-    grid-area: links;
+    grid-row: span 2;
 }
 
 #links>a {
@@ -413,22 +427,12 @@ main:not(:has(#frontpage, #breadcrumbs)) {
     margin-right: 10px;
 }
 
-#places{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-#places>section {
+#places #main-content>section {
     display: grid;
     grid-template:
-        auto / repeat(5, 1fr);
+        auto / repeat(4, 1fr);
     row-gap: 6px;
-    column-gap: 2px;
-}
-
-#places h3{
-    grid-column: span 5;
+    column-gap: 12px;
 }
 
 #places figure {
@@ -442,7 +446,7 @@ main:not(:has(#frontpage, #breadcrumbs)) {
 }
 
 #places img {
-    height: 150px;
+    height: 150%;
     width: 100%;
     object-fit: cover;
     transition: 350ms ease-in-out;
@@ -470,21 +474,22 @@ footer ul>li {
 }
 
 a.link,
-.link a {
+.link a,
+#breadcrumbs a {
     color: var(--black);
     text-decoration: none;
 }
 
-a.link.anim,
-.link.anim a,
+a .anim,
+.anim a,
 #gallery figcaption {
     position: relative;
     overflow: hidden;
     display: inline-block;
 }
 
-a.link.anim::before,
-.link.anim a::before,
+a .anim::before,
+.anim a::before,
 #gallery figcaption::before {
     content: "";
     height: 2px;
@@ -496,8 +501,8 @@ a.link.anim::before,
     left: -100%;
 }
 
-a.link.anim:hover::before,
-.link.anim a:hover::before,
+a .anim:hover::before,
+.anim a:hover::before,
 #gallery figcaption:hover::before {
     left: 0;
 }
@@ -541,8 +546,8 @@ a.link.anim:hover::before,
         min-height: 10vh;
     }
 
-    #facts {
-        flex-direction: row;
+    #general>section:nth-of-type(2){
+        order: 3;
     }
 
     #featured {
@@ -575,8 +580,7 @@ a.link.anim:hover::before,
 
     #general {
         grid-template:
-            "gallery links"
-            / auto 30%;
+            auto auto / auto 30%;
         gap: 12px;
     }
 }
