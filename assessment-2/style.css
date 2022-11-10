@@ -24,6 +24,13 @@ body {
     color: var(--black);
     font-family: 'Mukta', sans-serif;
     background-color: var(--light-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body:not(:has(#frontpage)) {
+    background-image: url(clouds.svg), linear-gradient(var(--blue), var(--light-blue) 50vh);
 }
 
 header {
@@ -37,7 +44,7 @@ header {
     align-items: center;
 }
 
-header>nav{
+header>nav {
     text-align: center;
 }
 
@@ -76,10 +83,15 @@ h3 {
 }
 
 section>h1,
-section>h2,
+section:not(#main-content)>h2,
 section>h3 {
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+#main-content>h2, #main-content>p{
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 h1 {
@@ -107,6 +119,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    flex-grow: 1;
+    gap: 6px;
 }
 
 #frontpage {
@@ -122,7 +136,8 @@ main {
     gap: 24px;
     flex-grow: 1;
     animation: background-clouds 5000ms linear infinite;
-    height: 100vh;
+    height: 50vh;
+    padding-top: 15vh;
 }
 
 @keyframes background-clouds {
@@ -180,24 +195,58 @@ svg.hills {
     text-decoration: none;
 }
 
+main:not(:has(#frontpage)):has(#breadcrumbs) {
+    display: flex;
+}
+
+
+main:not(:has(#frontpage, #breadcrumbs)) {
+    padding-top: 15vh;
+}
+
+#breadcrumbs {
+    min-height: 15vh;
+    display: flex;
+    justify-self: flex-end;
+    align-items: flex-end;
+}
+
+#breadcrumbs ul {
+    padding-inline-start: 0;
+    margin: 0 28px;
+}
+
+#breadcrumbs li {
+    display: inline-block;
+}
+
+#breadcrumbs li:not(:last-of-type)::after {
+    content: "\00bb";
+    padding: 0 6px 0 8px;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
 #main-content {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 24px 0;
+    padding: 24px 16px;
     border-radius: 3px 3px 0 0;
-    margin-top: 12vh;
+    flex-grow: 1;
 }
 
-#main-content>section,
-#featured>section>section {
-    margin: 0 16px;
+#frontpage+#main-content {
+    margin-top: 8vh;
 }
 
-#main-content>section:not(#featured, #general),
+#main-content>section:not(#featured, #general, #places),
 #general>section,
-#featured>section {
+#featured>section,
+#places>section {
     background-color: var(--light-grey);
     padding: 12px;
     border-radius: 3px;
@@ -320,8 +369,6 @@ svg.hills {
 
 #gallery a {
     display: block;
-    text-decoration: none;
-    color: var(--black);
     overflow: hidden;
 }
 
@@ -331,6 +378,7 @@ svg.hills {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     gap: 6px;
 }
 
@@ -344,21 +392,9 @@ svg.hills {
     grid-area: links;
 }
 
-/* #links>a {
-    background-color: var(--blue);
-    margin: 16px 0;
-    padding: 2px 8px;
-    border-radius: 3px;
-    color: var(--white);
-    text-decoration: none;
-    display: block;
-} */
-
 #links>a {
     padding: 8px 0px;
-    color: var(--black);
     border-bottom: 1px solid var(--grey);
-    text-decoration: none;
     display: block;
 }
 
@@ -377,6 +413,48 @@ svg.hills {
     margin-right: 10px;
 }
 
+#places{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#places>section {
+    display: grid;
+    grid-template:
+        auto / repeat(5, 1fr);
+    row-gap: 6px;
+    column-gap: 2px;
+}
+
+#places h3{
+    grid-column: span 5;
+}
+
+#places figure {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+#places img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    transition: 350ms ease-in-out;
+    transition-delay: 100ms;
+}
+
+#places figcaption {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 footer ul {
     padding-inline-start: 0;
     margin: 0;
@@ -391,15 +469,23 @@ footer ul>li {
     padding: 16px;
 }
 
-footer a {
+a.link,
+.link a {
     color: var(--black);
     text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    display: block;
 }
 
-footer a::before {
+a.link.anim,
+.link.anim a,
+#gallery figcaption {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+a.link.anim::before,
+.link.anim a::before,
+#gallery figcaption::before {
     content: "";
     height: 2px;
     width: 100%;
@@ -410,7 +496,9 @@ footer a::before {
     left: -100%;
 }
 
-footer a:hover::before{
+a.link.anim:hover::before,
+.link.anim a:hover::before,
+#gallery figcaption:hover::before {
     left: 0;
 }
 
@@ -422,14 +510,15 @@ footer a:hover::before{
 
     header>h1,
     header>nav {
-        margin: 0 16px;
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     h1 {
-        font-size: 28px;
-        padding-left: 12px;
+        font-size: 32px;
         text-align: left;
         margin-top: 0;
+        margin-left: 16px;
         width: auto;
     }
 
@@ -438,14 +527,18 @@ footer a:hover::before{
         padding: 8px;
     }
 
-    #main-content{
-        margin-top: 10vh;
-    }
-
     #frontpage {
         flex-direction: row-reverse;
         justify-content: space-around;
-        padding: 0 10%;
+        padding: 10vh 10% 0 10%;
+    }
+
+    main:not(:has(#frontpage, #breadcrumbs)) {
+        padding-top: 10vh;
+    }
+
+    #breadcrumbs {
+        min-height: 10vh;
     }
 
     #facts {
@@ -491,6 +584,7 @@ footer a:hover::before{
 @media only screen and (min-width: 1080px) {
 
     #main-content,
+    #breadcrumbs,
     footer {
         margin-left: 5%;
         margin-right: 5%;
@@ -500,6 +594,7 @@ footer a:hover::before{
 @media only screen and (min-width: 1440px) {
 
     #main-content,
+    #breadcrumbs,
     footer {
         margin-left: 10%;
         margin-right: 10%;
