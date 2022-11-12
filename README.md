@@ -105,12 +105,12 @@ Submit via Blackboard in the “Assessment” section. Submit a single zip file 
 
 ### Frontmatter
 For all of my HTML files I have done the following:
-- [ ] My doctype is specified as HTML as the first line: `<!DOCTYPE html>`.
-- [ ] I have opening and closing `<html>`, `<head>`, `<body>` tags.
-- [ ] My language is specified as English: `<html lang="en">`.
+- [x] My doctype is specified as HTML as the first line: `<!DOCTYPE html>`.
+- [x] I have opening and closing `<html>`, `<head>`, `<body>` tags.
+- [x] My language is specified as English: `<html lang="en">`.
 - [ ] I have `<meta>` tags for: charset, author, description, and viewport for each page, where the description is unique to each page.
 - [ ] I have a `<title>` specified inside the `<head>` that is unique to each page.
-- [ ] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site (I have no inline or internal CSS).
+- [x] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site (I have no inline or internal CSS).
 
 
 Example of all of this being done well:
@@ -130,16 +130,14 @@ Example of all of this being done well:
 ```
 
 ### Inside the `<body>` of each page
-- [ ] I have a navigation bar using the `<nav>` tag (possibly but not necessarily inside a `<header>` tag).
-  - [ ] This code might be copied and pasted to all pages, and then changed to make it clear which page is currently active.
-- [ ] I have a footer using the `<footer>` tag
-  - [ ] This code will typically be the same on all pages of your site
-- [ ] I have one and only one top level heading in my page using `<h1>` 
-  - [ ] I am aware that the different heading levels `<h1>`, `<h2>`, `<h3>`, etc. are the only tags that use numbers.
-  - [ ] I’m aware that there can be many `<h2>` headings and that this indicates that they are “second level”.
+- [x] I have a navigation bar using the `<nav>` tag (possibly but not necessarily inside a `<header>` tag).
+- [x] I have a footer using the `<footer>` tag
+- [x] I have one and only one top level heading in my page using `<h1>` 
+  - [x] I am aware that the different heading levels `<h1>`, `<h2>`, `<h3>`, etc. are the only tags that use numbers.
+  - [x] I’m aware that there can be many `<h2>` headings and that this indicates that they are “second level”.
 
 ### Inside the CSS
-- [ ] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
+- [x] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
 - [ ] I have sincerely tried to avoid repeating myself too much.
 - [ ] I have used groups, classes, the hierarchy (and possibly IDs where appropriate) to avoid repeating myself too much.
 
@@ -156,8 +154,8 @@ Example of all of this being done well:
 
 ### Extra things
 - [ ] I’ve tested my site on someone else’s computer (e.g., emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
-- [ ] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
-- [ ] If I’ve used code snippets from examples, I’ve used comments in HTML and CSS to show that I understand what is going 
+- [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
+- [x] If I’ve used code snippets from examples, I’ve used comments in HTML and CSS to show that I understand what is going 
 - [ ] I have considered basic usability principles in my design and have used reasonable font sizing throughout and enough contrast between text and background elements.
 
 ## Design Brief
@@ -166,17 +164,17 @@ Design and implement a responsive website that serves as a travel guide for anyb
 ### Design Criteria
 1. Meet the expectations of a particular target audience. It must be designed to work for the age range of people who are approximately 10 years old.
 2. Have eight web pages:
-  - [ ] One home page (index.html).
-  - [ ] Two category pages (e.g., ways to group location pages. Examples: “natural beauty”, “places to shop”, “local characters”, “historical sites”, etc.).
-  - [ ] Four (minimum) different location (or destination/feature/landmark/place) pages. These should each be categorised within at least one of your two categories. (They are indicative of what the site would look like with, say, 20 locations; but we’re not asking you to make those so that you can focus on your design skills).
+  - [x] One home page (index.html).
+  - [x] Two category pages (e.g., ways to group location pages. Examples: “natural beauty”, “places to shop”, “local characters”, “historical sites”, etc.).
+  - [x] Four (minimum) different location (or destination/feature/landmark/place) pages. These should each be categorised within at least one of your two categories. (They are indicative of what the site would look like with, say, 20 locations; but we’re not asking you to make those so that you can focus on your design skills).
   - [ ] One about page that includes your details, references, and info about the website.
 3. Include a header, nav bar, and footer that are consistent across all of your pages
   - Think about usability and information architecture in considering how users navigate your site
 4. Be designed responsively to work for all three of mobile, tablet, and desktop.
   - The assignment will be viewed in three sizes during marking:
-    - [ ] Mobile phone (iPhone X, which is 375px wide).
-    - [ ] Tablet (iPad, which is 768px wide).
-    - [ ] Desktop (1440px wide).
+    - [x] Mobile phone (iPhone X, which is 375px wide).
+    - [x] Tablet (iPad, which is 768px wide).
+    - [x] Desktop (1440px wide).
 5. Be a WCAG Level A accessible website:
     - For this purpose, defined as meeting WCAG 2.1 Level A standard (noting that most government agencies require AA standard).
     - https://www.w3.org/WAI/WCAG21/quickref/ (items labelled Level A).
