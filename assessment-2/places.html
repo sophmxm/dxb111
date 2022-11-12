@@ -17,7 +17,7 @@
         <h1><a href="index.html">Pets <span>Near Me</span></a></h1>
         <nav>
             <ul>
-                <li><a href="places.html">Places</a></li>
+                <li><a href="places.html" aria-current="page">Places</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#">Fun Facts</a></li>
                 <li><a href="about.html">About</a></li>
@@ -29,38 +29,51 @@
         <section id="breadcrumbs">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li>Places</li>
+                <li aria-current="page">Places</li>
             </ul>
         </section>
-        <section id="main-content" class="link">
+        <section id="main-content">
             <h2>Places</h2>
-            <section id="links" class="box grey link">
-                <h2><a href="places.html" class="anim">Places near me</a></h2>
-                <a href="places/petshop.html">Pet shop</a>
-                <a href="places/dogpark.html">Dog park</a>
-                <a href="#">Pet friendly restaurant</a>
-                <a href="#">Cat café</a>
-                <a href="#">Zoo</a>
-            <!-- <section id="links" class="box grey">
-                <h3 class="anim"><a href="places/petshop.html">Pet shops</a></h3>
-                <a href="places/petshop-1-bestfriends.html">Best Friends Pets Browns Plains</a>
-                <a href="places/petshop-2-petbarn.html">Petbarn Browns Plains</a>
+            <section id="links-btn" class="link">
+                <a href="places/petshop.html">
+                    <i class="material-symbols-outlined">pets</i>
+                    <p>Pet shops</p>
+                </a>
+                <a href="places/dogpark.html">
+                    <i class="material-symbols-outlined">park</i>
+                    <p>Dog parks</p>
+                </a>
+                <a href="#">
+                    <i class="material-symbols-outlined">restaurant</i>
+                    <p>Pet friendly restaurants</p>
+                </a>
+                <a href="#">
+                    <i class="material-symbols-outlined">local_cafe</i>
+                    <p>Cat cafés</p>
+                </a>
+                <a href="#">
+                    <i class="material-symbols-outlined">nature</i>
+                    <p>Zoos</p>
+                </a>
             </section>
-            <section id="links" class="box grey">
-                <h3 class="anim"><a href="places/dogpark.html">Dog parks</a></h3>
-                <a href="places/dogpark-1-algester.html">Algester Off Leash Dog Park</a>
-                <a href="places/dogpark-2-calamvale.html">Calamvale Off Leash Dog Park</a>
-            </section> -->
-            </section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33625.94406814731!2d153.02362997166477!3d-27.64024648487203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91445da45864f7%3A0x502a35af3de82d0!2sCalamvale%20QLD%204116!5e0!3m2!1sen!2sau!4v1668251762440!5m2!1sen!2sau"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Map Calamvale" alt="Map showing Calamvale"></iframe>
         </section>
-        
+
     </main>
     <footer>
-        <ul class="link anim">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+        <nav aria-label="Footer">
+            <ul class="link anim">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="places.html" aria-current="page">Places</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Fun Facts</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 

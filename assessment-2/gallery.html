@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="places.html">Places</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
                 <li><a href="#">Fun Facts</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -29,76 +29,70 @@
         <section id="breadcrumbs">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li>Gallery</li>
+                <li aria-current="page">Gallery</li>
             </ul>
         </section>
         <section id="main-content">
-            <section id="gallery-nav" class="box link">
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Dogs</figcaption>
-                        <img src="images/dog.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Cats</figcaption>
-                        <img src="images/cat.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Birds</figcaption>
-                        <img src="images/bird.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Fish</figcaption>
-                        <img src="images/fish.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Reptiles</figcaption>
-                        <img src="images/reptile.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Small animals</figcaption>
-                        <img src="images/small-animal.jpg" />
-                    </figure>
-                </a>
-                <a href="gallery.html">
-                    <figure>
-                        <figcaption>Other animals</figcaption>
-                        <img src="images/other-animal.jpg" />
-                    </figure>
-                </a>
+            <h2>Gallery</h2>
+            <section class="box">
+                <h3>Categories</h3>
+                <section id="gallery-nav" class="link">
+                    <a href="gallery.html">
+                        <p>🐕</p>
+                        <p>Dogs</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🐈</p>
+                        <p>Cats</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🐦</p>
+                        <p>Birds</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🐟</p>
+                        <p>Fish</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🦎</p>
+                        <p>Reptiles</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🐀</p>
+                        <p>Small animals</p>
+                    </a>
+                    <a href="gallery.html">
+                        <p>🐎</p>
+                        <p>Other animals</p>
+                    </a>
+                </section>
             </section>
             <section class="box">
-                <h2>All photos</h2>
+                <h3>All photos</h3>
                 <section id="gallery">
                     <section>
                         <img src="images/gallery/20221019_120550.jpg" />
                         <img src="images/gallery/IMG_20220506_215413_940.jpg" />
                         <img src="images/gallery/20221028_161434.jpg" />
+                        <img src="images/gallery/bird.jpg" />
                     </section>
                     <section>
                         <img src="images/gallery/IMG_20210928_162410_717.jpg" />
                         <img src="images/gallery/IMG_20210929_104706_150.jpg" />
-                        <img src="images/gallery/IMG_20210929_123425_639.jpg" />
+                        <img src="images/gallery/IMG_20220506_172346_870.jpg" />
+                        <img src="images/gallery/dog.jpg" />
                     </section>
                     <section>
                         <img src="images/gallery/IMG_20210927_134711_113.jpg" />
                         <img src="images/gallery/20221019_120746.jpg" />
                         <img src="images/gallery/PXL_20221017_033344435.jpg" />
+                        <img src="images/gallery/fish.jpg" />
                     </section>
                     <section>
                         <img src="images/gallery/IMG_20210927_151245_190.jpg" />
                         <img src="images/gallery/IMG_20210929_104636_767.jpg" />
                         <img src="images/gallery/20211108_212306.jpg" />
+                        <img src="images/gallery/small-animal.jpg" />
                         <img src="images/gallery/IMG_20210927_151710_932.jpg" />
                     </section>
                 </section>
@@ -106,11 +100,15 @@
         </section>
     </main>
     <footer>
-        <ul class="link anim">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+        <nav aria-label="Footer">
+            <ul class="link anim">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="places.html">Places</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="#">Fun Facts</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 

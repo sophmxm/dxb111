@@ -15,7 +15,7 @@
 <body>
     <header>
         <h1><a href="index.html">Pets <span>Near Me</span></a></h1>
-        <nav>
+        <nav aria-label="Main">
             <ul>
                 <li><a href="places.html">Places</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -59,10 +59,11 @@
                     <h2>Did you know?</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus accusantium quaerat
                         consequatur corrupti voluptate blanditiis?</p>
-                        <p><a href="#">Learn more animal facts!</a></p>
+                    <p><a href="#">Learn more animal facts!</a></p>
                 </section>
-                <section id="links" class="box grey link">
-                    <h2><i class="material-symbols-outlined">location_on</i><a href="places.html" class="anim">Places near me</a></h2>
+                <section id="links" class="box grey link" role="navigation" aria-label="Places">
+                    <h2><i class="material-symbols-outlined">location_on</i><a href="places.html" class="anim">Places
+                            near me</a></h2>
                     <a href="places/petshop.html">Pet shop</a>
                     <a href="places/dogpark.html">Dog park</a>
                     <a href="#">Pet friendly restaurant</a>
@@ -74,7 +75,7 @@
             <section id="featured">
                 <h2>Featured pet</h2>
                 <figure>
-                    <img src="images/temp/placeholder-1.jpg" />
+                    <img src="images/gallery/IMG_20210928_162411_109.jpg" alt="A calico tabby cat with brown and white fur" />
                     <figcaption>Kitty</figcaption>
                 </figure>
                 <section class="box grey">
@@ -94,63 +95,49 @@
                         mollitia tenetur suscipit eaque consectetur?</p>
                     <p>Sent from Lorem</p>
                 </section>
-                <p>Want to see your pet or animal pictures on our website? <a href="">Email us</a> and submit your
+                <p>Want to see your pet or animal pictures on our website? <a href="about.html">Email us</a> and submit your
                     photo. </p>
             </section>
 
-            <section id="gallery-nav" class="box link">
-                <h2>Gallery</h2>
+            <section id="gallery-nav" class="box link" role="navigation" aria-label="Gallery">
+                <h2><a href="gallery.html" class="anim">Gallery</a></h2>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Dogs</figcaption>
-                        <img src="images/dog.jpg" />
-                    </figure>
+                    <p>🐕</p>
+                    <p>Dogs</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Cats</figcaption>
-                        <img src="images/cat.jpg" />
-                    </figure>
+                    <p>🐈</p>
+                    <p>Cats</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Birds</figcaption>
-                        <img src="images/bird.jpg" />
-                    </figure>
+                    <p>🐦</p>
+                    <p>Birds</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Fish</figcaption>
-                        <img src="images/fish.jpg" />
-                    </figure>
+                    <p>🐟</p>
+                    <p>Fish</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Reptiles</figcaption>
-                        <img src="images/reptile.jpg" />
-                    </figure>
+                    <p>🦎</p>
+                    <p>Reptiles</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Small animals</figcaption>
-                        <img src="images/small-animal.jpg" />
-                    </figure>
+                    <p>🐀</p>
+                    <p>Small animals</p>
                 </a>
                 <a href="gallery.html">
-                    <figure>
-                        <figcaption>Other animals</figcaption>
-                        <img src="images/other-animal.jpg" />
-                    </figure>
+                    <p>🐎</p>
+                    <p>Other animals</p>
                 </a>
             </section>
         </section>
     </main>
     <footer>
-        <nav>
+        <nav aria-label="Footer">
             <ul class="link anim">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Places</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="places.html">Places</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#">Fun Facts</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
