@@ -45,9 +45,9 @@
             <div style="height: 256px; width: 256px; margin: 0 16px; background-color: white;"></div>
             <section>
                 <h2>Own a pet or just love animals?</h2>
-                <section>
-                    <a href="#">Discover places</a>
-                    <a href="#">Check out the gallery</a>
+                <section class="link">
+                    <a href="places.html">Discover places</a>
+                    <a href="gallery.html">Check out the gallery</a>
                 </section>
             </section>
         </section>
@@ -58,12 +58,8 @@
                 <section class="box yellow">
                     <h2>Did you know?</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus accusantium quaerat
-                        consequatur corrupti voluptate blanditiis? <a href="#">Learn more animal facts!</a></p>
-                </section>
-                <section class="box blue">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus accusantium quaerat
                         consequatur corrupti voluptate blanditiis?</p>
-                    <p>Lorem ipsum!</p>
+                        <p><a href="#">Learn more animal facts!</a></p>
                 </section>
                 <section id="links" class="box grey link">
                     <h2><a href="places.html" class="anim">Places near me</a></h2>
@@ -102,8 +98,8 @@
                     photo. </p>
             </section>
 
-            <h2>Gallery</h2>
-            <section id="gallery" class="box grey link">
+            <section id="gallery-nav" class="box link">
+                <h2>Gallery</h2>
                 <a href="gallery.html">
                     <figure>
                         <figcaption>Dogs</figcaption>
@@ -150,11 +146,15 @@
         </section>
     </main>
     <footer>
-        <ul class="link anim">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+        <nav>
+            <ul class="link anim">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Fun Facts</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 
