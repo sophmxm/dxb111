@@ -142,7 +142,7 @@ main {
 
 #frontpage {
     background-color: var(--blue);
-    background-image: url(clouds.png), linear-gradient(var(--blue), var(--light-blue));
+    background-image: url(images/clouds.png), linear-gradient(var(--blue), var(--light-blue));
     background-repeat: repeat;
     background-position: 200% 0;
     background-size: 400%;
