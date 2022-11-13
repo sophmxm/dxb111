@@ -11,10 +11,10 @@
 :root {
     --white: #ffffff;
     --black: #222222;
-    --blue: #425DA4;
-    --light-blue: #3ABEE4;
-    --dark-blue: #0767AB;
-    --yellow: #F5B14D;
+    --blue: #425da4;
+    --light-blue: #3abee4;
+    --dark-blue: #0767ab;
+    --yellow: #f5b14d;
     --dark-yellow: #d1af6f;
     --grey: #dddddd;
     --light-grey: #efefef;
@@ -40,7 +40,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
     align-items: center;
     box-shadow: 0 0 5px var(--grey);
 }
@@ -144,20 +144,65 @@ main {
 
 #frontpage {
     background-color: var(--blue);
-    background-image: url(images/clouds.png), linear-gradient(var(--blue), var(--light-blue));
+    background-image: url(images/clouds.png), linear-gradient(var(--blue), var(--light-blue) 50%, #b2eafa);
     background-repeat: repeat;
     background-position: 200% 0;
     background-size: 400%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    gap: 24px;
     flex-grow: 1;
     animation: background-clouds 120000ms linear infinite;
     height: 50vh;
-    min-height: 95vh;
+    min-height: 90vh;
+    position: relative;
+}
+
+#frontpage h2{
+    font-size: 48px;
+}
+
+#frontpage::before, #frontpage::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 100%;
+    z-index: 1;
+}
+
+#frontpage::before{
+    width: 80%;
+    background-image: url(images/clouds-bottomleft.png);
+    left: 0;
+}
+
+#frontpage::after{
+    width: 50%;
+    background-image: url(images/clouds-bottomright.png);
+    right: 0;
+}
+
+#frontpage>*:not(section:has(img[src="images/bg.png"])){
+    z-index: 2;
+}
+
+#frontpage section:has(img[src="images/bg.png"]){
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    bottom: -10%;
+    width: 100%;
+}
+
+#frontpage section>img[src="images/bg.png"]{
+    position: relative;
+    object-fit: cover;
+    width: 300%;
+    height: 300%;
+    left: -150%;
 }
 
 @keyframes background-clouds {
@@ -187,20 +232,24 @@ object[data="clouds.svg"] {
     }
 }
 
+#frontpage>section:first-of-type{
+    margin-bottom: 35%;
+}
+
 #frontpage section:has(>a) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 64px;
     gap: 12px;
     z-index: 1;
 }
 
 #frontpage>section a {
-    padding: 8px 6px;
-    flex-grow: 1;
+    padding: 8px 32px;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 0 2px var(--blue);
+    box-shadow: 0 0 2px var(--dark-grey);
     text-transform: uppercase;
     font-weight: bold;
     transition: 350ms;
@@ -250,6 +299,7 @@ main:not(:has(#frontpage, #breadcrumbs)) {
     padding: 24px 16px;
     border-radius: 3px 3px 0 0;
     flex-grow: 1;
+    z-index: 3;
 }
 
 /* SECTION STYLES */
@@ -745,16 +795,36 @@ h2 .material-symbols-outlined {
     }
 
     #frontpage {
-        flex-direction: row-reverse;
-        justify-content: space-around;
+        justify-content: flex-start;
         padding: 0 10%;
         background-position: 200% 0;
         background-size: 200%;
+        min-height: 95vh;
+        text-align: left;
+    }
+
+    #frontpage::before{
+        width: 60%;
+    }
+
+    #frontpage::after{
+        width: 35%;
+    }
+
+    #frontpage section>img[src="images/bg.png"]{
+        width: calc(100% + 800px);
+        left: calc(-800px + 20%);
     }
 
     #frontpage section:has(>a) {
         flex-direction: row;
+        justify-content: left;
         margin: 0;
+        margin-top: 32px;
+    }
+
+    #frontpage>section:first-of-type{
+        margin-bottom: 25%;
     }
 
     main:has(#frontpage) #main-content>section:first-of-type>section:nth-of-type(2) {
@@ -855,6 +925,7 @@ h2 .material-symbols-outlined {
 @media only screen and (min-width: 1080px) {
 
     header,
+    #frontpage,
     #main-content,
     #breadcrumbs,
     footer {
@@ -872,11 +943,29 @@ h2 .material-symbols-outlined {
     header>nav {
         margin: 0;
     }
+    
+    #frontpage::before{
+        width: 40%;
+    }
+
+    #frontpage::after{
+        width: 20%;
+    }
+
+    #frontpage section>img[src="images/bg.png"]{
+        width: calc(100% + 600px);
+        left: calc(-600px + 15%);
+    }
+
+    #frontpage>section:first-of-type{
+        margin-bottom: 15%;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
 
     header,
+    #frontpage,
     #main-content,
     #breadcrumbs,
     footer {
