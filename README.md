@@ -93,23 +93,23 @@ Submit via Blackboard in the “Assessment” section. Submit a single zip file 
 <br />
 
 ## Checklist
-- [ ] My HTML files have sensible names and are organised in some way.
-- [ ] I have eight HTML files: a home page, two category pages, four destination pages, and an about page.
+- [x] My HTML files have sensible names and are organised in some way.
+- [x] I have eight HTML files: a home page, two category pages, four destination pages, and an about page.
 - [ ] I have produced a rationale document that makes it clear who I’m designing this site for.
-- [ ] My images have sensible names and are likely stored in a folder called “images” and have no special characters or spaces in the file names.
-- [ ] My images are optimised (likely as JPG or PNG images, normally <1MB each).
-- [ ] I have one CSS file with a sensible name (possibly more than one if needed, but certainly not one per page).
+- [#] My images have sensible names and are likely stored in a folder called “images” and have no special characters or spaces in the file names.
+- [#] My images are optimised (likely as JPG or PNG images, normally <1MB each).
+- [#] I have one CSS file with a sensible name (possibly more than one if needed, but certainly not one per page).
 - [ ] I have validated my HTML and CSS files using the W3C validators.
-- [ ] I have tested my website in the Chrome browser and checked how it works at different sizes.
-- [ ] I have made my code easy to read with nice indentation (you can use a plugin for this) and comments.
+- [#] I have tested my website in the Chrome browser and checked how it works at different sizes.
+- [#] I have made my code easy to read with nice indentation (you can use a plugin for this) and comments.
 
 ### Frontmatter
 For all of my HTML files I have done the following:
 - [x] My doctype is specified as HTML as the first line: `<!DOCTYPE html>`.
 - [x] I have opening and closing `<html>`, `<head>`, `<body>` tags.
 - [x] My language is specified as English: `<html lang="en">`.
-- [ ] I have `<meta>` tags for: charset, author, description, and viewport for each page, where the description is unique to each page.
-- [ ] I have a `<title>` specified inside the `<head>` that is unique to each page.
+- [#] I have `<meta>` tags for: charset, author, description, and viewport for each page, where the description is unique to each page.
+- [#] I have a `<title>` specified inside the `<head>` that is unique to each page.
 - [x] I have a `<link>` tag which is inside the `<head>` for linking my CSS which contains all of the CSS for my whole site (I have no inline or internal CSS).
 
 
@@ -139,24 +139,24 @@ Example of all of this being done well:
 ### Inside the CSS
 - [x] If I’ve used web fonts (like those from google) I have those imported at the top of my CSS file.
 - [ ] I have sincerely tried to avoid repeating myself too much.
-- [ ] I have used groups, classes, the hierarchy (and possibly IDs where appropriate) to avoid repeating myself too much.
+- [x] I have used groups, classes, the hierarchy (and possibly IDs where appropriate) to avoid repeating myself too much.
 
 ### Important things
-- [ ] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
-- [ ] I have read and considered each of the items in the Guide to Accessibility for AS2 file that’s in this same folder.
+- [x] I have read the rubric and the brief and I’m aware that there are more things to do that aren’t on this list.
+- [x] I have read and considered each of the items in the Guide to Accessibility for AS2 file that’s in this same folder.
 
 ### Rationale
-- [ ] I have included an A4 PDF with my rationale.
-- [ ] It includes a 200 word statement of my target audience (i.e., what kind of 10-year olds?).
-- [ ] A one-page mood board of inspiration (no attribution needed for this).
+- [x] I have included an A4 PDF with my rationale.
+- [x] It includes a 200 word statement of my target audience (i.e., what kind of 10-year olds?).
+- [x] A one-page mood board of inspiration (no attribution needed for this).
 - [ ] It includes three lo-fi wireframes for one of my pages (e.g., your destination page design in each of mobile, tablet, and desktop sizing.
-- [ ] It includes three screenshots with annotations (consider approx. 10-20 annotations) showing how my design has met the needs of the brief.
+- [x] It includes three screenshots with annotations (consider approx. 10-20 annotations) showing how my design has met the needs of the brief.
 
 ### Extra things
 - [ ] I’ve tested my site on someone else’s computer (e.g., emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [x] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
 - [x] If I’ve used code snippets from examples, I’ve used comments in HTML and CSS to show that I understand what is going 
-- [ ] I have considered basic usability principles in my design and have used reasonable font sizing throughout and enough contrast between text and background elements.
+- [x] I have considered basic usability principles in my design and have used reasonable font sizing throughout and enough contrast between text and background elements.
 
 ## Design Brief
 Design and implement a responsive website that serves as a travel guide for anybody to become interested in some aspect of your local suburb/town/part of the city (e.g. “come and visit” or highlighting particular places [e.g. playgrounds, shops, parks, gardens, etc.]). It should meet criteria of:
@@ -167,7 +167,7 @@ Design and implement a responsive website that serves as a travel guide for anyb
   - [x] One home page (index.html).
   - [x] Two category pages (e.g., ways to group location pages. Examples: “natural beauty”, “places to shop”, “local characters”, “historical sites”, etc.).
   - [x] Four (minimum) different location (or destination/feature/landmark/place) pages. These should each be categorised within at least one of your two categories. (They are indicative of what the site would look like with, say, 20 locations; but we’re not asking you to make those so that you can focus on your design skills).
-  - [ ] One about page that includes your details, references, and info about the website.
+  - [x] One about page that includes your details, references, and info about the website.
 3. Include a header, nav bar, and footer that are consistent across all of your pages
   - Think about usability and information architecture in considering how users navigate your site
 4. Be designed responsively to work for all three of mobile, tablet, and desktop.
