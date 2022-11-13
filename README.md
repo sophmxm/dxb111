@@ -99,7 +99,7 @@ Submit via Blackboard in the “Assessment” section. Submit a single zip file 
 - [#] My images have sensible names and are likely stored in a folder called “images” and have no special characters or spaces in the file names.
 - [#] My images are optimised (likely as JPG or PNG images, normally <1MB each).
 - [#] I have one CSS file with a sensible name (possibly more than one if needed, but certainly not one per page).
-- [ ] I have validated my HTML and CSS files using the W3C validators.
+- [#] I have validated my HTML and CSS files using the W3C validators.
 - [#] I have tested my website in the Chrome browser and checked how it works at different sizes.
 - [#] I have made my code easy to read with nice indentation (you can use a plugin for this) and comments.
 
@@ -153,7 +153,7 @@ Example of all of this being done well:
 - [#] It includes three screenshots with annotations (consider approx. 10-20 annotations) showing how my design has met the needs of the brief.
 
 ### Extra things
-- [ ] I’ve tested my site on someone else’s computer (e.g., emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
+- [#] I’ve tested my site on someone else’s computer (e.g., emailing it as a ZIP file or using a USB drive then opening it elsewhere) to make sure that I haven’t used absolute links to files or images and haven’t used local fonts, etc.
 - [#] I haven’t used JS, Bootstrap (or any framework) and the code is all my own.
 - [#] If I’ve used code snippets from examples, I’ve used comments in HTML and CSS to show that I understand what is going 
 - [#] I have considered basic usability principles in my design and have used reasonable font sizing throughout and enough contrast between text and background elements.
