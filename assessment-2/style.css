@@ -8,7 +8,6 @@
 /* ICONS */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,700,1,0');
 
-/* ROOT */
 :root {
     --white: #ffffff;
     --black: #222222;
@@ -161,12 +160,11 @@ main {
     position: relative;
 }
 
-#frontpage h2 {
+#frontpage h2{
     font-size: 48px;
 }
 
-#frontpage::before,
-#frontpage::after {
+#frontpage::before, #frontpage::after{
     content: "";
     position: absolute;
     height: 100%;
@@ -176,23 +174,23 @@ main {
     z-index: 1;
 }
 
-#frontpage::before {
+#frontpage::before{
     width: 80%;
     background-image: url(images/clouds-bottomleft.png);
     left: 0;
 }
 
-#frontpage::after {
+#frontpage::after{
     width: 50%;
     background-image: url(images/clouds-bottomright.png);
     right: 0;
 }
 
-#frontpage>*:not(section:has(img[src="images/bg.png"])) {
+#frontpage>*:not(section:has(img[src="images/bg.png"])){
     z-index: 2;
 }
 
-#frontpage section:has(img[src="images/bg.png"]) {
+#frontpage section:has(img[src="images/bg.png"]){
     position: absolute;
     overflow: hidden;
     left: 0;
@@ -200,7 +198,7 @@ main {
     width: 100%;
 }
 
-#frontpage section>img[src="images/bg.png"] {
+#frontpage section>img[src="images/bg.png"]{
     position: relative;
     object-fit: cover;
     width: 300%;
@@ -235,7 +233,7 @@ object[data="clouds.svg"] {
     }
 }
 
-#frontpage>section:first-of-type {
+#frontpage>section:first-of-type{
     margin-bottom: 35%;
 }
 
@@ -594,8 +592,7 @@ main:has(#frontpage) #main-content>section:first-of-type>section:nth-of-type(2)>
     transition-delay: 100ms;
 }
 
-#places figcaption,
-#places figure>p {
+#places figcaption, #places figure>p {
     font-family: 'Rubik', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -770,8 +767,7 @@ h2 .material-symbols-outlined {
     font-size: 28px;
 }
 
-#links h2>i,
-#gallery-nav h2>i {
+#links h2>i, #gallery-nav h2>i{
     top: 0;
 }
 
@@ -811,15 +807,15 @@ h2 .material-symbols-outlined {
         text-align: left;
     }
 
-    #frontpage::before {
+    #frontpage::before{
         width: 60%;
     }
 
-    #frontpage::after {
+    #frontpage::after{
         width: 35%;
     }
 
-    #frontpage section>img[src="images/bg.png"] {
+    #frontpage section>img[src="images/bg.png"]{
         width: calc(100% + 800px);
         left: calc(-800px + 20%);
     }
@@ -831,7 +827,7 @@ h2 .material-symbols-outlined {
         margin-top: 32px;
     }
 
-    #frontpage>section:first-of-type {
+    #frontpage>section:first-of-type{
         margin-bottom: 25%;
     }
 
@@ -951,21 +947,21 @@ h2 .material-symbols-outlined {
     header>nav {
         margin: 0;
     }
-
-    #frontpage::before {
+    
+    #frontpage::before{
         width: 40%;
     }
 
-    #frontpage::after {
+    #frontpage::after{
         width: 20%;
     }
 
-    #frontpage section>img[src="images/bg.png"] {
+    #frontpage section>img[src="images/bg.png"]{
         width: calc(100% + 600px);
         left: calc(-600px + 15%);
     }
 
-    #frontpage>section:first-of-type {
+    #frontpage>section:first-of-type{
         margin-bottom: 15%;
     }
 }
