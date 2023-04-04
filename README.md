@@ -203,7 +203,7 @@ Design and implement a responsive website that serves as a travel guide for anyb
     - Make reference to your consideration of accessibility in your design
 </details>
 
-<details><summary><h2>Grades</h2></summary>
+<details><summary><h2>Grades and Feedback</h2></summary>
 
 **Final overall grade: 7**
 
